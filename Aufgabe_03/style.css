@@ -1,0 +1,28 @@
+body{
+   background-image: url("pics/bg_02.png");
+   color: wheat;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: small;
+   margin: 0 auto;
+    max-width: 800px;
+}
+.nav_bar  {
+   position: fixed;
+   top: 0;
+   right: 0;
+   background-color: black;
+   font-size: larger
+}
+.nav_bar_list a{
+   text-decoration: none;
+   color: wheat;
+}
+.nav_bar_list .active {
+    color: rgb(132, 14, 161);
+}
+h1{
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+  }
+}
