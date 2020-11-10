@@ -6,11 +6,13 @@ body{
    margin: 0 auto;
     max-width: 800px;
 }
+li{
+   list-style-type: none;
+}
 .nav_bar  {
    text-align: center;
    align-items: center;
    padding: 8px;
-   list-style: none;
    font-size: 12px;
    position: fixed;
    top: 0;
@@ -19,7 +21,6 @@ body{
    font-size: larger;
 }
 .nav_bar_list a{
-   list-style: none;
    color: wheat;
 }
 .nav_bar_list .active {
