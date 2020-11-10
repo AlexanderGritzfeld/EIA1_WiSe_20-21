@@ -19,6 +19,7 @@ li{
    right: 0;
    background-color: black;
    font-size: larger;
+   opacity: 70%;
 }
 .nav_bar_list a{
    color: wheat;
@@ -34,6 +35,7 @@ li{
    margin-top: 0px;
    border-bottom-left-radius: 600px;
    border-bottom-right-radius: 600px;
+   float: left;
  }
 h1{
       font-size: 100px;
@@ -41,4 +43,18 @@ h1{
       text-align: center;
       text-shadow: 2px 2px 2px grey;
   }
+#icon{
+   position: absolute;
+   left: 30%;
+   top: 30vh;
+   opacity: 60%;
+   transition: transform 0.4s ease-in-out;
+   transition-property: transform;
+   transition-duration: 0.4s;
+   transition-timing-function: ease-out;
+   transition-delay: 0s;
+}
+#icon:hover {
+   opacity: 100%;
+}
 }
