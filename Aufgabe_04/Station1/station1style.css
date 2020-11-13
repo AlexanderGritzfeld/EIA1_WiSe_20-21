@@ -1,0 +1,12 @@
+body{
+    background-image: url("pics/bg.png");
+    color: wheat;
+    font-family: sans-serif;
+    font-size: small;
+ }
+ .karte{
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     z-index: -1;
+ }
