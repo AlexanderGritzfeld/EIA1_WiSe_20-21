@@ -32,4 +32,36 @@
     position: absolute;
     left: 90px;
     top: 85px;
+    opacity: 0%;
+}
+.stern_hover:hover{
+    opacity: 100%;
+}
+.stern_hohl2{
+    position: absolute;
+    left: 90px;
+    top: 85px;
+}
+.stern_hover2{
+   position: absolute;
+   left: 90px;
+   top: 85px;
+   opacity: 0%;
+}
+.stern_hover2:hover{
+   opacity: 100%;
+}
+.stern_hohl3{
+    position: absolute;
+    left: 90px;
+    top: 85px;
+}
+.stern_hover3{
+   position: absolute;
+   left: 90px;
+   top: 85px;
+   opacity: 0%;
+}
+.stern_hover3:hover{
+   opacity: 100%;
 }
