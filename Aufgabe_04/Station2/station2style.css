@@ -39,13 +39,13 @@
 }
 .stern_hohl2{
     position: absolute;
-    left: 90px;
-    top: 85px;
+    left: 200px;
+    top: 30px;
 }
 .stern_hover2{
    position: absolute;
-   left: 90px;
-   top: 85px;
+   left: 200px;
+   top: 30px;
    opacity: 0%;
 }
 .stern_hover2:hover{
@@ -53,12 +53,12 @@
 }
 .stern_hohl3{
     position: absolute;
-    left: 90px;
+    left: 350px;
     top: 85px;
 }
 .stern_hover3{
    position: absolute;
-   left: 90px;
+   left: 350px;
    top: 85px;
    opacity: 0%;
 }
