@@ -1,0 +1,61 @@
+ 
+ body{
+    background-image: url("pics/bg.png");
+    color: white;
+    font-family: sans-serif;
+    font-size: small;
+    height: 100%;
+ }
+ .wrapper{
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.schrift{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 285px;
+    z-index: 3;
+}
+.zeug {
+    position: absolute;
+    width: 500px;
+    height: auto;
+}
+ .plant{
+     position: absolute;
+     left: -70px;
+     top: -225px;
+ }
+ .gifts{
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    z-index: 2;
+}
+.video{
+    position: absolute;
+    left: 270px;
+    top: -70px;
+    z-index: 1;
+}
+.stern1{
+    position: absolute;
+    left: 350px;
+    top: -50px;
+    z-index: 2;
+}
+.stern2{
+    position: absolute;
+    left: 480px;
+    top: -150px;
+    z-index: 2;
+}
+.stern3{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
