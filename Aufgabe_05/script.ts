@@ -20,5 +20,5 @@ var gesamt08 : number = africa08 + southamerica08 + europe08 + northamerica08 + 
 var gesamt18 : number = africa18 + southamerica18 + europe18 + northamerica18 + asia18 +australia18;
 
 
-console.log("Die Emission von Afrika ist: " + africa18 + " kg CO2")
+console.log("Die Emission von Afrika ist: " + africa18 + "kg CO2")
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + Math.round(africa18/gesamt18*100) + "%")
