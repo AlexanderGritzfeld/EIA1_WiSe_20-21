@@ -12,6 +12,6 @@ var australia08 = 1993;
 var australia18 = 2100.5;
 var gesamt08 = africa08 + southamerica08 + europe08 + northamerica08 + asia08 + australia08;
 var gesamt18 = africa18 + southamerica18 + europe18 + northamerica18 + asia18 + australia18;
-console.log("Die Emission von Afrika ist: " + africa18 + " kg CO2");
+console.log("Die Emission von Afrika ist: " + africa18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + Math.round(africa18 / gesamt18 * 100) + "%");
 //# sourceMappingURL=script.js.map
