@@ -1,0 +1,9 @@
+var africa08 = 1028;
+var africa18 = 1235.5;
+var southamerica08 = 1132.6;
+var southamerica18 = 1261.5;
+var europe08 = 4965.7;
+var europe18 = 4209.3;
+var northamerica08 = 6600.4;
+var northamerica18 = 6035.6;
+//# sourceMappingURL=script.js.map
