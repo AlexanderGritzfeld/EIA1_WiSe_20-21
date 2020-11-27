@@ -1,3 +1,4 @@
+//Definition der Variabeln
 var africa08 : number = 1028;
 var africa18 : number = 1235.5;
 
@@ -19,7 +20,7 @@ var australia18 : number = 2100.5;
 var gesamt08 : number = africa08 + southamerica08 + europe08 + northamerica08 + asia08 +australia08;
 var gesamt18 : number = africa18 + southamerica18 + europe18 + northamerica18 + asia18 +australia18;
 
-
+//Die Konsolenausgabe stört ja niemanden, oder?
 console.log("Die Emission von Afrika ist: " + africa18 + "kg CO2")
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + Math.round(africa18/gesamt18*100) + "%")
 console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission zu " + Math.round(((africa18/ africa08)-1)*100) + "% verändert")
@@ -59,3 +60,4 @@ console.log("Die Emission von Australien ist: " + australia18 + "kg CO2")
 console.log("Relativ zur Gesamtemission der Welt verursacht Australien damit " + Math.round(australia18/gesamt18*100) + "%")
 console.log("Für Australien hat sich 2018 im Vergleich zu 2008 die Emission zu " + Math.round(((australia18/ australia08)-1)*100) + "% verändert")
 console.log("2018 im Vergleich zu 2008 sind das " + Math.round(australia18 - australia08) + "kg CO2")
+
