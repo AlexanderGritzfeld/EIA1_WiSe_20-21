@@ -20,9 +20,8 @@ var australia18 : number = 2100.5;
 var gesamt08 : number = africa08 + southamerica08 + europe08 + northamerica08 + asia08 +australia08;
 var gesamt18 : number = africa18 + southamerica18 + europe18 + northamerica18 + asia18 +australia18;
 
-console.log(Math.round(gesamt18));
+/* Die Konsolenausgabe der letzten Aufgabe (Mit einigen mathematischen Denkfehlern, wie ich feststellen musste...)
 
-//Die Konsolenausgabe stört ja niemanden, oder?
 console.log("Die Emission von Afrika ist: " + africa18 + "kg CO2")
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + Math.round(africa18/gesamt18*100) + "%")
 console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission zu " + Math.round(((africa18/ africa08)-1)*100) + "% verändert")
@@ -62,6 +61,9 @@ console.log("Die Emission von Australien ist: " + australia18 + "kg CO2")
 console.log("Relativ zur Gesamtemission der Welt verursacht Australien damit " + Math.round(australia18/gesamt18*100) + "%")
 console.log("Für Australien hat sich 2018 im Vergleich zu 2008 die Emission zu " + Math.round(((australia18/ australia08)-1)*100) + "% verändert")
 console.log("2018 im Vergleich zu 2008 sind das " + Math.round(australia18 - australia08) + "kg CO2")
+
+Konsolenausgabe Ende */
+
 
 //Jetzt beginnt das Programmieren! *Reibt sich die Hände*
 
@@ -103,12 +105,15 @@ window.addEventListener('load', function(){
     });
 
     //Ladies und Gentlemen, das worauf sie alle gewartet haben: Die Funktion
-    function domManipulator(kontinent: string, kontinent18: number, kontinent08: number){
+    function domManipulator(kontinent: string, kontinent08: number, kontinent18: number){
     //Der Text soll sich ändern
     document.querySelector("#titleRegion").innerHTML = kontinent;
     document.querySelector("#titleRegion2").innerHTML = kontinent;
     //Und jetzt die Zahlen
-    document.querySelector("#emission").innerHTML = kontinent18.toFixed(2) + " CO2 kg";
-    document.querySelector("#emissionProzent").innerHTML = (kontinent18/gesamt18*100).toFixed(2) + "%";
-
+    document.querySelector("#emission").innerHTML = kontinent18.toFixed(2) + " kg CO2";
+    document.querySelector("#emissionProzent").innerHTML = (100/(gesamt18/kontinent18)).toFixed(2) + "%";
+    document.querySelector("#wachstumsrate").innerHTML = (((kontinent18/ kontinent08)-1)*100).toFixed(2) + "%";
+    document.querySelector("#wachstumZahl").innerHTML = (kontinent18 - kontinent08).toFixed(2) + " kg CO2";
+    //Schließlich noch das Diagramm
+    document.querySelector(".chart").setAttribute("style", "height: " + (100/(gesamt18/kontinent18)).toFixed(2) + "%");
     }
