@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html {
+    background: #006600;
+}
+#pad1, #pad2, #pad3, #pad4, #pad5, #pad6, #pad7, #pad8, #pad9{
+    background-image: url(images/block.jpg);
+    /*https://www.supermariobrosx.org/forums/download/file.php?avatar=8701_1465288535.gif */
+
+}
