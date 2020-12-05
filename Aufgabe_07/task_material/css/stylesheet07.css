@@ -20,8 +20,13 @@ html {
 }
 .container img{
     position: relative;
-    left: 180px;
-    
+    left: 250px;
+    opacity: 70%;
+    cursor: pointer;
+    transition: 1s;
+}
+.container img:hover{
+    opacity: 100%;
 }
 #pad1, #pad2, #pad3, #pad4, #pad5, #pad6, #pad7, #pad8, #pad9{
     background-image: url(../../task_material/images/block.png);
