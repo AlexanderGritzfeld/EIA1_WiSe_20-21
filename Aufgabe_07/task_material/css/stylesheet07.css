@@ -7,8 +7,20 @@ html, body {
 html {
     background: #006600;
 }
+#container {
+    position: relative;
+    width: 650px;
+    height: 650px;
+}
+.container div{
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    margin: 5px;
+}
 #pad1, #pad2, #pad3, #pad4, #pad5, #pad6, #pad7, #pad8, #pad9{
-    background-image: url(images/block.jpg);
+    background-image: url(../../task_material/images/block.jpg);
     /*https://www.supermariobrosx.org/forums/download/file.php?avatar=8701_1465288535.gif */
+    
 
 }
