@@ -59,3 +59,13 @@ function playKnopf() {
     drumPad[8].play();
     drumPad[4].play();
 };    
+
+//Schalter für Record-Button
+var btn: HTMLElement = document.querySelector("#myBtn");
+btn.addEventListener("click", function()
+if (btn.getAttribute("class") == "active" ) {
+btn.setAttribute("class", "");
+}
+else{
+    btn.setAttribute("class", "active");
+}
