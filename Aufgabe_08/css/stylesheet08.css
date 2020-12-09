@@ -38,3 +38,9 @@ html {
     background-image: url(../../Aufgabe_08/images/blockMoving.gif);
     opacity: 100%;
 }
+#myBtn{
+background: green;
+}
+#myBtn .active{
+background: red;
+}
