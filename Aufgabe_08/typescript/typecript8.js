@@ -1,6 +1,6 @@
 /*ah shit here we go again */
 //gut definieren wir erstmal die Sounds
-var drumPad;
+var drumPad = [];
 drumPad[0] = new Audio("./assets/A.mp3");
 drumPad[1] = new Audio("./assets/C.mp3");
 drumPad[2] = new Audio("./assets/F.mp3");
