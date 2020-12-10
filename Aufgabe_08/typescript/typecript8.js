@@ -55,5 +55,24 @@ function playKnopf() {
     drumPad[8].play();
     drumPad[4].play();
 }
-;
+//jetzt soll, wenn man den Play Button drückt dieser verschwinden und der Stop-Button auftauchen (und umgekehrt)
+/*zunächst einmal definiere ich dat, damit ich es später einfacher habe. Ich kann mir dann nämlich
+"document.get..." zu scripten sparen */
+var myPlayBtn = document.getElementById("play");
+var myStopBtn = document.getElementById("stop");
+/*Event bei welcher meiner Funktion (die später kommt) sagt, welche Werte sie nehmen soll beim Klick auf dem speziellen Element */
+myPlayBtn.addEventListener("click", function () {
+    toggleClasses(this, myStopBtn);
+});
+//nochmal dasselbe nur umgekehrt
+myStopBtn.addEventListener("click", function () {
+    toggleClasses(this, myPlayBtn);
+});
+//die eigentliche Funktion, die dahinter steckt
+function toggleClasses(firstHTMLElement, secondHTMLElement) {
+    firstHTMLElement.classList.add("is-hidden"); //fügt definierten ersten Element Klasse hinzu --> verschwindet
+    secondHTMLElement.classList.remove("is-hidden"); //entfernt von zweitem Element Klasse --> ploppt auf
+    console.log("Hallo?");
+}
+//Schalter für Record-Button
 //# sourceMappingURL=typecript8.js.map
