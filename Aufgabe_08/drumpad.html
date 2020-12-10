@@ -1,11 +1,16 @@
+<!--Anmerkung zu Beginn: Bei dieser Aufgabe habe ich mehr kommentiert, da die doch etwas kniffliger ist/ war
+    und ich mit dem Kommentieren hoffe, dass es (zumindest für mich) verständlicher wird-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drumpad Aufgabe_08</title>
+    <!--Es folgt nun ein CSS-Link zu/ von einer Website, bei der ich Icons herbekommen kann-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/stylesheet08.css">
     <script src="../Aufgabe_08/typescript/typecript8.js" defer></script>
+    
 </head>
 
 <body>
@@ -19,8 +24,13 @@
         <div id="pad7"></div>
         <div id="pad8"></div>
         <div id="pad9"></div>
-        <img id="playbutton" src="images/play-button.png">
-        <button id="myBtn">Record</button>
+        <!--Das ist jetzt mein Element, welches ich von der Website "gezogen" habe-->
+        <!--Dem Element gebe ich eine ID damit ich es später in meinem Leben leichter habe-->
+        <i id="play" class="fas fa-play"></i>
+        <!--Das zweite Element, welches mit dem ersten in Verbindung stehen soll.
+            Alles gleich nur dass dieses zusätzlich noch die Klasse "is-hidden" bekommt, wodurch es verteckt wird (siehe CSS)-->
+        <i id="stop" class="fas fa-stop is-hidden"></i>
+        <button id="mybtn">Record</button>
     </div>
 </body>
 
