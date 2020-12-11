@@ -15,30 +15,39 @@ drumPad[8] = new Audio("./assets/snare.mp3");
 //Eventlistener (erstmal nur vom Drum Pad)
 document.querySelector("#pad1").addEventListener("click", function(): void {
     playAudio(0);
+    recordAudio(0); //brauchen wir später für den Record-Button
 });
 document.querySelector("#pad2").addEventListener("click", function(): void {
     playAudio(1);
+    recordAudio(1);
 });
 document.querySelector("#pad3").addEventListener("click", function(): void {
     playAudio(2);
+    recordAudio(2);
 });
 document.querySelector("#pad4").addEventListener("click", function(): void {
     playAudio(3);
+    recordAudio(3);
 });
 document.querySelector("#pad5").addEventListener("click", function(): void {
     playAudio(4);
+    recordAudio(4);
 });
 document.querySelector("#pad6").addEventListener("click", function(): void {
     playAudio(5);
+    recordAudio(5);
 });
 document.querySelector("#pad7").addEventListener("click", function(): void {
     playAudio(6);
+    recordAudio(6);
 });
 document.querySelector("#pad8").addEventListener("click", function(): void {
     playAudio(7);
+    recordAudio(7);
 });
 document.querySelector("#pad9").addEventListener("click", function(): void {
     playAudio(8);
+    recordAudio(8);
 });
 
 //Funktion, die aufgelöst werden soll
@@ -71,6 +80,8 @@ function playKnopf(): void {
 "document.get..." zu scripten sparen */
 const myPlayBtn: HTMLElement = document.getElementById("myPlayBtn");
 const myStopBtn: HTMLElement = document.getElementById("myStopBtn");
+const myRecBtn: HTMLElement = document.getElementById("myRecBtn");
+const myTrashBtn: HTMLElement = document.getElementById("myTrashBtn");
 
 /*Event bei welcher meiner Funktion (die später kommt) sagt, welche Werte sie nehmen soll beim Klick auf dem speziellen Element */
 myPlayBtn.addEventListener("click", function (): void {
@@ -94,10 +105,10 @@ let myInterval: number;
 let i: number = 0;
 
 //Funktion für Play/ Stop-Button (spielt Samples)
-function playSchleife (b: boolean): void{
+function playSchleife (b: boolean): void {
     //boolean setzten wir durch Knopfdruck auf Play/ Stop fest
     if (b == true) {
-    myInterval = setInterval(function(): void{
+    myInterval = setInterval(function(): void {
         if (i < drumPad.length) { //geht Sounds durch, solange i < Länge des Beats /der Töne ist
             playAudio(drumPad[i]);
             i++; //+1 bei jedem Durchlauf
@@ -113,4 +124,4 @@ function playSchleife (b: boolean): void{
     }
 }
 
-//Schalter für Record-Button
+//Schalter für Record-Button (wünscht mir Glück)
