@@ -22,18 +22,6 @@ html {
     margin: 5px;
 }
 
-.container img{
-    position: relative;
-    left: 250px;
-    opacity: 70%;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.container img:hover{
-    opacity: 100%;
-}
-
 #pad1, #pad2, #pad3, #pad4, #pad5, #pad6, #pad7, #pad8, #pad9{
     background-image: url(../../Aufgabe_08/images/block.png);
     /*https://www.supermariobrosx.org/forums/download/file.php?avatar=8701_1465288535.gif */
@@ -46,20 +34,26 @@ html {
     opacity: 100%;
 }
 
-#play{
+#myPlayBtn{
     color: rgb(177, 16, 16, .7);
+    position: relative;
+    left: 225px;
+    font-size: 100px;
 }
 
-#play:hover{
+#myPlayBtn:hover{
     cursor: pointer;
-    opacity: 100%;
+    opacity: 100% !important
 }
 
-#stop{
+#myStopBtn{
     color: rgb(177, 16, 16, .7);
+    position: relative;
+    left: 225px;
+    font-size: 100px;
 }
 
-#stop:hover{
+#myStopBtn:hover{
     cursor: pointer;
     opacity: 100%;
 }
@@ -68,10 +62,26 @@ html {
     display: none !important /* !important wegen Kaskadierung; somit steht diese Regel über allem und wird ausgeführt*/
 }
 
-#mybtn{
-background: green;
+#myRecBtn{
+    color: rgb(177, 16, 16, .7);
+    position: relative;
+    left: 250px;
+    font-size: 100px;
 }
 
-#mybtn .active{
-background: red;
+#myRecBtn:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#myTrashBtn{
+    color: rgb(177, 16, 16, .7);
+    position: relative;
+    left: 275px;
+    font-size: 100px;
+}
+
+#myTrashBtn:hover{
+    cursor: pointer;
+    opacity: 100%;
 }
