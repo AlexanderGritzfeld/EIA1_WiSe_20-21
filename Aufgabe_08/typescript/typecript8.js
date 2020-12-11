@@ -13,30 +13,39 @@ drumPad[8] = new Audio("./assets/snare.mp3");
 //Eventlistener (erstmal nur vom Drum Pad)
 document.querySelector("#pad1").addEventListener("click", function () {
     playAudio(0);
+    recordAudio(0); //brauchen wir später für den Record-Button
 });
 document.querySelector("#pad2").addEventListener("click", function () {
     playAudio(1);
+    recordAudio(1);
 });
 document.querySelector("#pad3").addEventListener("click", function () {
     playAudio(2);
+    recordAudio(2);
 });
 document.querySelector("#pad4").addEventListener("click", function () {
     playAudio(3);
+    recordAudio(3);
 });
 document.querySelector("#pad5").addEventListener("click", function () {
     playAudio(4);
+    recordAudio(4);
 });
 document.querySelector("#pad6").addEventListener("click", function () {
     playAudio(5);
+    recordAudio(5);
 });
 document.querySelector("#pad7").addEventListener("click", function () {
     playAudio(6);
+    recordAudio(6);
 });
 document.querySelector("#pad8").addEventListener("click", function () {
     playAudio(7);
+    recordAudio(7);
 });
 document.querySelector("#pad9").addEventListener("click", function () {
     playAudio(8);
+    recordAudio(8);
 });
 //Funktion, die aufgelöst werden soll
 function playAudio(i) {
@@ -65,6 +74,8 @@ function playKnopf(): void {
 "document.get..." zu scripten sparen */
 var myPlayBtn = document.getElementById("myPlayBtn");
 var myStopBtn = document.getElementById("myStopBtn");
+var myRecBtn = document.getElementById("myRecBtn");
+var myTrashBtn = document.getElementById("myTrashBtn");
 /*Event bei welcher meiner Funktion (die später kommt) sagt, welche Werte sie nehmen soll beim Klick auf dem speziellen Element */
 myPlayBtn.addEventListener("click", function () {
     toggleClasses(this, myStopBtn);
@@ -102,5 +113,5 @@ function playSchleife(b) {
         clearInterval(myInterval); //Aus w3schools: "The clearInterval() method clears a timer set with the setInterval() method." Was das heißt? ¯\_(ツ)_/¯
     }
 }
-//Schalter für Record-Button
+//Schalter für Record-Button (wünscht mir Glück)
 //# sourceMappingURL=typecript8.js.map
