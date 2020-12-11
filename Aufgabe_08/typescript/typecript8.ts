@@ -51,7 +51,7 @@ document.querySelector("#pad9").addEventListener("click", function(): void {
 });
 
 //Funktion, die aufgelöst werden soll
-function playAudio(i: number): void {
+function playAudio(i: number): void { //irgendetwas stimmt hier nicht...
     drumPad[i].play();
 }
 
@@ -125,3 +125,27 @@ function playSchleife (b: boolean): void {
 }
 
 //Schalter für Record-Button (wünscht mir Glück)
+let booleanRec: boolean;
+function recordAudio(index: number): void {
+if (booleanRec == true) {
+    drumPad.push(index); //ich glaube drumPad ist falsch und es soll stadessen ein neues Array definiert werden
+}
+}
+
+//Wechsel von Aufnehmen zu Nicht-Aufnehmen und andersrum
+myRecBtn.addEventListener("click", function(): void {
+    //wenn auf Klick die Klasse "inactive" besteht, dann soll diese durch "active" ersetzt werden
+    if (myRecBtn.classList.contains("inactive")) {
+        myRecBtn.classList.remove("inactive");
+        myRecBtn.classList.add("active");
+        //zusätzlich soll der boolean auf true wechseln --> nimmt auf (siehe recordAudio Funktion)
+        booleanRec = true;
+        console.log("Hallo");
+    }
+    else {
+        //dasselbe nur umgekehrt
+        myRecBtn.classList.remove("active");
+        myRecBtn.classList.add("inactive");
+        booleanRec = false;
+    }
+});
