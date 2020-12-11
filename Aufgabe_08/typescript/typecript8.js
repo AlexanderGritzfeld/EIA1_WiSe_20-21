@@ -114,4 +114,27 @@ function playSchleife(b) {
     }
 }
 //Schalter für Record-Button (wünscht mir Glück)
+var booleanRec;
+function recordAudio(index) {
+    if (booleanRec == true) {
+        drumPad.push(index); //ich glaube drumPad ist falsch und es soll stadessen ein neues Array definiert werden
+    }
+}
+//Wechsel von Aufnehmen zu Nicht-Aufnehmen und andersrum
+myRecBtn.addEventListener("click", function () {
+    //wenn auf Klick die Klasse "inactive" besteht, dann soll diese durch "active" ersetzt werden
+    if (myRecBtn.classList.contains("inactive")) {
+        myRecBtn.classList.remove("inactive");
+        myRecBtn.classList.add("active");
+        //zusätzlich soll der boolean auf true wechseln --> nimmt auf (siehe recordAudio Funktion)
+        booleanRec = true;
+        console.log("Hallo");
+    }
+    else {
+        //dasselbe nur umgekehrt
+        myRecBtn.classList.remove("active");
+        myRecBtn.classList.add("inactive");
+        booleanRec = false;
+    }
+});
 //# sourceMappingURL=typecript8.js.map
