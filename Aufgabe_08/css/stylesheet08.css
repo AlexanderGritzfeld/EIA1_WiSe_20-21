@@ -6,7 +6,7 @@ html, body {
 }
 
 html {
-    background: #006600;
+    background-color: darkgreen;
 }
 
 .container {
@@ -43,7 +43,8 @@ html {
 
 #myPlayBtn:hover{
     cursor: pointer;
-    opacity: 100% !important
+    text-shadow: 0px 0px 6px orange; 
+    transition: 0.25s;
 }
 
 #myStopBtn{
@@ -55,7 +56,8 @@ html {
 
 #myStopBtn:hover{
     cursor: pointer;
-    opacity: 100%;
+    text-shadow: 0px 0px 6px orange; 
+    transition: 0.25s;
 }
 /* das wird dann den Play-Button/ Stop-Button "verschwinden" lassen */
 .is-hidden{
@@ -71,7 +73,8 @@ html {
 
 #myRecBtn:hover{
     cursor: pointer;
-    opacity: 100%;
+    text-shadow: 0px 0px 6px orange; 
+    transition: 0.25s;
 }
 
 #myTrashBtn{
@@ -83,5 +86,6 @@ html {
 
 #myTrashBtn:hover{
     cursor: pointer;
-    opacity: 100%;
+    text-shadow: 0px 0px 6px orange; 
+    transition: 0.25s;
 }
