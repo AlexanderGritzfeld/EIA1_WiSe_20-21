@@ -14,7 +14,7 @@ drumPad[8] = new Audio("./assets/smw_1-up.wav");
 //Sounds stammen von hier https://themushroomkingdom.net/media/smw/wav
 
 //Funktion, die aufgelöst werden soll
-function playAudio(thesound: number): void { //irgendetwas stimmt hier nicht...
+function playAudio(thesound: number): void {
     drumPad [thesound].play();
 }
 
@@ -56,26 +56,8 @@ document.querySelector("#pad9").addEventListener("click", function(): void {
     recordAudio(8);
 });
 
-//das Array für die Standarttonabfolge (?)
+//das Array für die Standarttonabfolge
 let myArray: number[] = [3, 4, 5];
-
- /*noch aus Aufgabe 7; brauche ich das noch???
-
-
-//die Sample Abfolge soll spielen
-document.querySelector("#myPlayBtn").addEventListener("click", function (): void {
-        setInterval(function (): void {
-            playKnopf();
-        }, 500);
-    });
-
-//die Funktion für den PlayButton (aus Aufgabe 7)
-function playKnopf(): void {
-    drumPad[5].play();
-    drumPad[8].play();
-    drumPad[4].play();
-}    
-*/
 
 //jetzt soll, wenn man den Play Button drückt dieser verschwinden und der Stop-Button auftauchen (und umgekehrt)
 
@@ -148,7 +130,6 @@ myRecBtn.addEventListener("click", function(): void {
         myRecBtn.classList.add("active");
         //zusätzlich soll der boolean auf true wechseln --> nimmt auf (siehe recordAudio Funktion)
         booleanRec = true;
-        console.log("Hallo");
     }
     else {
         //dasselbe nur umgekehrt
