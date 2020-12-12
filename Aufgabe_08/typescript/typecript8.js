@@ -54,25 +54,8 @@ var L08;
         playAudio(8);
         recordAudio(8);
     });
-    //das Array für die Standarttonabfolge (?)
+    //das Array für die Standarttonabfolge
     var myArray = [3, 4, 5];
-    /*noch aus Aufgabe 7; brauche ich das noch???
-   
-   
-   //die Sample Abfolge soll spielen
-   document.querySelector("#myPlayBtn").addEventListener("click", function (): void {
-           setInterval(function (): void {
-               playKnopf();
-           }, 500);
-       });
-   
-   //die Funktion für den PlayButton (aus Aufgabe 7)
-   function playKnopf(): void {
-       drumPad[5].play();
-       drumPad[8].play();
-       drumPad[4].play();
-   }
-   */
     //jetzt soll, wenn man den Play Button drückt dieser verschwinden und der Stop-Button auftauchen (und umgekehrt)
     /*zunächst einmal definiere ich dat, damit ich es später einfacher habe. Ich kann mir dann nämlich
     "document.get..." zu scripten sparen */
@@ -136,7 +119,6 @@ var L08;
             myRecBtn.classList.add("active");
             //zusätzlich soll der boolean auf true wechseln --> nimmt auf (siehe recordAudio Funktion)
             booleanRec = true;
-            console.log("Hallo");
         }
         else {
             //dasselbe nur umgekehrt
