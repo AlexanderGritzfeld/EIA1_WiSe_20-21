@@ -37,7 +37,7 @@ html {
 #myPlayBtn{
     color: rgb(177, 16, 16, .7);
     position: relative;
-    left: 225px;
+    left: 70px;
     font-size: 100px;
 }
 
@@ -50,7 +50,7 @@ html {
 #myStopBtn{
     color: rgb(177, 16, 16, .7);
     position: relative;
-    left: 225px;
+    left: 70px;
     font-size: 100px;
 }
 
@@ -67,7 +67,7 @@ html {
 #myRecBtn{
     color: rgb(177, 16, 16, .7);
     position: relative;
-    left: 250px;
+    left: 195px;
     font-size: 100px;
 }
 
@@ -76,16 +76,29 @@ html {
     text-shadow: 0px 0px 6px orange; 
     transition: 0.25s;
 }
+.active{
+    text-shadow: 0px 0px 6px orange;
+    transition: 0.25s;
+}
 
 #myTrashBtn{
     color: rgb(177, 16, 16, .7);
     position: relative;
-    left: 275px;
+    left: 330px;
     font-size: 100px;
+}
+
+.done{
+    transform: rotate(180deg);
 }
 
 #myTrashBtn:hover{
     cursor: pointer;
     text-shadow: 0px 0px 6px orange; 
     transition: 0.25s;
+}
+
+.fas{
+    margin-bottom: 50px;
+    margin-top: 25px;
 }
