@@ -3,15 +3,16 @@ var L08;
 (function (L08) {
     //gut definieren wir erstmal die Sounds
     var drumPad = [];
-    drumPad[0] = new Audio("./assets/A.mp3");
-    drumPad[1] = new Audio("./assets/C.mp3");
-    drumPad[2] = new Audio("./assets/F.mp3");
-    drumPad[3] = new Audio("./assets/G.mp3");
-    drumPad[4] = new Audio("./assets/hihat.mp3");
-    drumPad[5] = new Audio("./assets/kick.mp3");
-    drumPad[6] = new Audio("./assets/laugh-1.mp3");
-    drumPad[7] = new Audio("./assets/laugh-2.mp3");
-    drumPad[8] = new Audio("./assets/snare.mp3");
+    drumPad[0] = new Audio("./assets/smw_coin.wav");
+    drumPad[1] = new Audio("./assets/smw_power-up_appears.wav");
+    drumPad[2] = new Audio("./assets/smw_power-up.wav");
+    drumPad[3] = new Audio("./assets/smw_jump.wav");
+    drumPad[4] = new Audio("./assets/smw_spin_jump.wav");
+    drumPad[5] = new Audio("./assets/smw_spring_jump.wav");
+    drumPad[6] = new Audio("./assets/smw_stomp_koopa_kid.wav");
+    drumPad[7] = new Audio("./assets/smw_pipe.wav");
+    drumPad[8] = new Audio("./assets/smw_1-up.wav");
+    //Sounds stammen von hier https://themushroomkingdom.net/media/smw/wav
     //Funktion, die aufgelöst werden soll
     function playAudio(thesound) {
         drumPad[thesound].play();
@@ -123,6 +124,10 @@ var L08;
             myArray.push(index); //ich glaube drumPad ist falsch und es soll stadessen ein neues Array definiert werden
         }
     }
+    //Trash-Button --> sorgt dafür, dass der Beat auf Null gesetzt wird (hoffentlich)
+    myTrashBtn.addEventListener("click", function () {
+        myArray = [];
+    });
     //Wechsel von Aufnehmen zu Nicht-Aufnehmen und andersrum
     myRecBtn.addEventListener("click", function () {
         //wenn auf Klick die Klasse "inactive" besteht, dann soll diese durch "active" ersetzt werden
