@@ -1,16 +1,16 @@
 /*ah shit here we go again */
 
 //gut definieren wir erstmal die Sounds
-var drumPad = [];
-drumPad[0] = new Audio('./assets/A.mp3');
-drumPad[1] = new Audio('./assets/C.mp3');
-drumPad[2] = new Audio('./assets/F.mp3');
-drumPad[3] = new Audio('./assets/G.mp3');
-drumPad[4] = new Audio('./assets/hihat.mp3');
-drumPad[5] = new Audio('./assets/kick.mp3');
-drumPad[6] = new Audio('./assets/laugh-1.mp3');
-drumPad[7] = new Audio('./assets/laugh-2.mp3');
-drumPad[8] = new Audio('./assets/snare.mp3');
+var drumPad0 = [];
+drumPad0[0] = new Audio('./assets/A.mp3');
+drumPad0[1] = new Audio('./assets/C.mp3');
+drumPad0[2] = new Audio('./assets/F.mp3');
+drumPad0[3] = new Audio('./assets/G.mp3');
+drumPad0[4] = new Audio('./assets/hihat.mp3');
+drumPad0[5] = new Audio('./assets/kick.mp3');
+drumPad0[6] = new Audio('./assets/laugh-1.mp3');
+drumPad0[7] = new Audio('./assets/laugh-2.mp3');
+drumPad0[8] = new Audio('./assets/snare.mp3');
 
 //Eventlistener (erstmal nur vom Drum Pad)
 document.querySelector('#pad1').addEventListener('click', function(){
@@ -43,7 +43,7 @@ document.querySelector('#pad9').addEventListener('click', function(){
 
 //Funktion, die aufgelöst werden soll
 function playSound(i :number){
-    drumPad[i].play();
+    drumPad0[i].play();
 };
 
 //jetzt kommen wir zum Teil B
@@ -55,7 +55,7 @@ document.querySelector('#playbutton').addEventListener('click', function(){
 
 //die Funktion für den PlayButton
 function playButton(){
-    drumPad[5].play();
-    drumPad[8].play();
-    drumPad[4].play();
+    drumPad0[5].play();
+    drumPad0[8].play();
+    drumPad0[4].play();
 };    
