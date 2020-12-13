@@ -113,7 +113,7 @@ function playSchleife (b: boolean): void {
 let booleanRec: boolean;
 function recordAudio(index: number): void {
 if (booleanRec == true) {
-    myArray.push(index); //ich glaube drumPad ist falsch und es soll stadessen ein neues Array definiert werden
+    myArray.push(index);
 }
 }
 
