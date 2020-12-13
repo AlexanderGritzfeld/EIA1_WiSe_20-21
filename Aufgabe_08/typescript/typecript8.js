@@ -104,7 +104,7 @@ var L08;
     var booleanRec;
     function recordAudio(index) {
         if (booleanRec == true) {
-            myArray.push(index); //ich glaube drumPad ist falsch und es soll stadessen ein neues Array definiert werden
+            myArray.push(index);
         }
     }
     //Trash-Button --> sorgt dafür, dass der Beat auf Null gesetzt wird (hoffentlich)
