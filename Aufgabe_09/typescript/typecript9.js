@@ -14,5 +14,10 @@ var L09;
             status: true
         }
     ];
+    //jetzt definieren wir/ beziehen uns auf HTMLElemente
+    var newtask;
+    var hinzu;
+    var taskElement;
+    var zähler;
 })(L09 || (L09 = {}));
 //# sourceMappingURL=typecript9.js.map
