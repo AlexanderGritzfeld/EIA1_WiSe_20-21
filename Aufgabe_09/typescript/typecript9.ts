@@ -20,5 +20,9 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     status: true
 }
 ];
-
+//jetzt definieren wir/ beziehen uns auf HTMLElemente
+    let newtask: HTMLInputElement;
+    let hinzu: HTMLElement;
+    let taskElement: HTMLElement;
+    let zähler: HTMLElement;
 }
