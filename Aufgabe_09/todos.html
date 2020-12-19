@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drumpad ~Aufgabe 9~</title>
+    <title>How-to-not-ertrink-in-your-Aufgaben ~Aufgabe 9~</title>
     <!--Es folgt nun ein CSS-Link zu/ von einer Website, bei der ich Icons herbekommen kann-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/stylesheet09.css">
@@ -13,33 +13,17 @@
 
 <body>
     <div class="container">
-        <div id="pad1"></div>
-        <div id="pad2"></div>
-        <div id="pad3"></div>
-        <div id="pad4"></div>
-        <div id="pad5"></div>
-        <div id="pad6"></div>
-        <div id="pad7"></div>
-        <div id="pad8"></div>
-        <div id="pad9"></div>
+    <!--Vorsicht: Ironie-->
+    <h1>Die einzigartige "To-Do"-App</h1>
+    <hr>
 
-        <hr>
-
-        <!--Das ist jetzt mein Element, welches ich von der Website "gezogen" habe
-            Dem Element gebe ich eine ID damit ich es später in meinem Leben leichter habe-->
-        <i id="myPlayBtn" title="Ich lasse den Beat spielen!" class="fas fa-play"></i>
-
-        <!--Das zweite Element, welches mit dem ersten in Verbindung stehen soll.
-            Alles gleich nur dass dieses zusätzlich noch die Klasse "is-hidden" bekommt, wodurch es verteckt wird (siehe CSS)-->
-        <i id="myStopBtn" title="Ich stoppe den Beat!" class="fas fa-stop is-hidden"></i>
-
-        <!--Der Button, der dann auf Knopfdruck die Tonfolge neu definieren soll
-            inactive weil es ja nicht sofort aufnehmen soll; erst beim Knopfduck drauf-->
-        <i id="myRecBtn" title="Ich nehme den Beat auf!" class="fas fa-microphone inactive"></i>
-
-        <!--Und dieser Button soll die gesetzte Tonfolge wieder clearen-->
-        <i id="myTrashBtn" title="Ich schicke das Sample in das Reich des Vergessens, auf dass sie bis zum Tag des Jüngsten Gerichts ziellos umherwandern, in den Tiefen meines unendlichen Magens... Mich dürstet es nach mehr...MEHR!! KLICK MICH!! NA LOS!!!! MACH!! DIESER HUNGER...MACH DAS ER AUFHÖRT......" class="fas fa-trash"></i>
-
+    <!--span, damit besser auf diesen Part, der sich verändern soll, zugreifen kann-->
+    <h2 id="standard"><span id="zähler">0 Aufgaben sind</span> derzeit zu erledigen</h2>
+    
+    <!--input Feld. Required, weil das dem Browser sagt, "Jo die Aufgabe kann nur ausgeführt werden, wenn da was im Feld steht"-->
+    <input id="newtask" type="text" placeholder="Add a task to your list..." required>
+    <!--Brauche ich das?  <input type="submit"> -->
+    <hr>
     </div>
 </body>
 
