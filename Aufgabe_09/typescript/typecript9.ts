@@ -25,4 +25,19 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     let hinzu: HTMLElement;
     let taskElement: HTMLElement;
     let zähler: HTMLElement;
+    
+    newtask = document.querySelector("#newtask");
+    hinzu = document.querySelector("#hinzu");
+    taskElement = document.querySelector("tasks");
+    zähler = document.querySelector("#zähler");
+
+    //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
+    hinzu.addEventListener("click", addTask);
+    //aber soll ja auch durch "Enter" hizufügen, also:
+    document.addEventListener("keydown", function (pressed:KeyboardEvent): void {
+        if (pressed.keyCode === 13 {
+            addTask();
+        }
+    });
+
 }
