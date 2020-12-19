@@ -19,5 +19,17 @@ var L09;
     var hinzu;
     var taskElement;
     var zähler;
+    newtask = document.querySelector("#newtask");
+    hinzu = document.querySelector("#hinzu");
+    taskElement = document.querySelector("tasks");
+    zähler = document.querySelector("#zähler");
+    //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
+    hinzu.addEventListener("click", addTask);
+    //aber soll ja auch durch "Enter" hizufügen, also:
+    document.addEventListener("keydown", function (pressed) {
+        if (pressed.keyCode === 13) {
+            addTask();
+        }
+    });
 })(L09 || (L09 = {}));
 //# sourceMappingURL=typecript9.js.map
