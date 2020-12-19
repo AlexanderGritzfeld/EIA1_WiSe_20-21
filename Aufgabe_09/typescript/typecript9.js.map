@@ -1,1 +1,1 @@
-{"version":3,"file":"typecript9.js","sourceRoot":"","sources":["typecript9.ts"],"names":[],"mappings":""}
+{"version":3,"file":"typecript9.js","sourceRoot":"","sources":["typecript9.ts"],"names":[],"mappings":"AAAA,iJAAiJ;AACjJ,IAAU,GAAG,CAsBZ;AAtBD,WAAU,GAAG;IAET,OAAO;IACP,IAAI,KAAK,GAAW,CAAC,CAAC;IAO1B,oEAAoE;IAChE,IAAI,WAAW,GAAe;QAClC;YACI,OAAO,EAAE,yBAAyB;YAClC,MAAM,EAAE,KAAK;SAChB;QACD;YACI,OAAO,EAAE,sCAAsC;YAC/C,MAAM,EAAE,IAAI;SACf;KACA,CAAC;AAEF,CAAC,EAtBS,GAAG,KAAH,GAAG,QAsBZ"}
