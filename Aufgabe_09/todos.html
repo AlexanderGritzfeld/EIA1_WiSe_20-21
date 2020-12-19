@@ -14,15 +14,16 @@
 <body>
     <div class="container">
     <!--Vorsicht: Ironie-->
-    <h1>Die einzigartige "To-Do"-App</h1>
+    <h1>~Die einzigartige "To-Do"-App~</h1>
     <hr>
 
     <!--span, damit besser auf diesen Part, der sich verändern soll, zugreifen kann-->
     <h2 id="standard"><span id="zähler">0 Aufgaben sind</span> derzeit zu erledigen</h2>
     
-    <!--input Feld. Required, weil das dem Browser sagt, "Jo die Aufgabe kann nur ausgeführt werden, wenn da was im Feld steht"-->
-    <input id="newtask" type="text" placeholder="Add a task to your list..." required>
-    <!--Brauche ich das?  <input type="submit"> -->
+    <form id="newtask" method="post">
+        <input id="add" type="text" placeholder="Schreibe hier deine Aufgabe rein.">
+        <button id="btn" type="submit">Hinzufügen</button>
+    </form>
     <hr>
     </div>
 </body>
