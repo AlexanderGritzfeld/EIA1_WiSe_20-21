@@ -6,7 +6,14 @@ html, body {
 }
 
 html {
-    background-color: darkgreen;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(192,202,214,1) 51%, rgba(157,154,169,1) 100%);
+
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -22,83 +29,10 @@ html {
     margin: 5px;
 }
 
-#pad1, #pad2, #pad3, #pad4, #pad5, #pad6, #pad7, #pad8, #pad9{
-    background-image: url(../../Aufgabe_08/images/block.png);
-    /*https://www.supermariobrosx.org/forums/download/file.php?avatar=8701_1465288535.gif */
-    cursor: pointer;
-    opacity: 70%;
-}
-
-#pad1:hover, #pad2:hover, #pad3:hover, #pad4:hover, #pad5:hover, #pad6:hover, #pad7:hover, #pad8:hover, #pad9:hover{
-    background-image: url(../../Aufgabe_08/images/blockMoving.gif);
-    opacity: 100%;
-}
-
-#myPlayBtn{
-    color: rgb(177, 16, 16, .7);
-    position: relative;
-    left: 70px;
-    font-size: 100px;
-}
-
-#myPlayBtn:hover{
-    cursor: pointer;
-    text-shadow: 0px 0px 6px orange; 
-    transition: 0.25s;
-}
-
-#myStopBtn{
-    color: rgb(177, 16, 16, .7);
-    position: relative;
-    left: 70px;
-    font-size: 100px;
-}
-
-#myStopBtn:hover{
-    cursor: pointer;
-    text-shadow: 0px 0px 6px orange; 
-    transition: 0.25s;
-}
-/* das wird dann den Play-Button/ Stop-Button "verschwinden" lassen */
-.is-hidden{
-    display: none !important /* !important wegen Kaskadierung; somit steht diese Regel über allem und wird ausgeführt*/
-}
-
-#myRecBtn{
-    color: rgb(177, 16, 16, .7);
-    position: relative;
-    left: 195px;
-    font-size: 100px;
-}
-
-#myRecBtn:hover{
-    cursor: pointer;
-    text-shadow: 0px 0px 6px orange; 
-    transition: 0.25s;
-}
-.active{
-    text-shadow: 0px 0px 6px orange;
-    transition: 0.25s;
-}
-
-#myTrashBtn{
-    color: rgb(177, 16, 16, .7);
-    position: relative;
-    left: 330px;
-    font-size: 100px;
-}
-
-.done{
-    transform: rotate(180deg);
-}
-
-#myTrashBtn:hover{
-    cursor: pointer;
-    text-shadow: 0px 0px 6px orange; 
-    transition: 0.25s;
-}
-
-.fas{
-    margin-bottom: 50px;
-    margin-top: 25px;
+#newtask {
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 15px;
 }
