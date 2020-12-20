@@ -1,17 +1,8 @@
 // Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
 var L09;
 (function (L09) {
-    //und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen
-    var dieAufgaben = [
-        {
-            content: "Schöne Feiertage haben.",
-            status: false
-        },
-        {
-            content: "Dieser Aufgabe als gut empfinden. :)",
-            status: true
-        }
-    ];
+    //Array für die Aufgaben mit dem Typ des Interfaces
+    var dieAufgaben = [];
     //jetzt definieren wir/ beziehen uns auf HTMLElemente
     var add;
     var hinzu;
@@ -63,12 +54,13 @@ var L09;
             todos.querySelector(".delete").addEventListener("click", function () {
                 bringDenMüllNachDraußen(i);
             });
-            taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
+            taskElement.appendChild(todos); //das bringt alles zum laufen, also, dass die html Elemente erzeugt werden
         };
         /* console.log("test: zeigeAufgaben wird ausgeführt"); */
         for (var i = 0; i < dieAufgaben.length; i++) {
             _loop_1(i);
         }
+        langsamHabeIchGenugVonDieserAufgabe();
     }
     function bringDenMüllNachDraußen(i) {
         dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
@@ -78,6 +70,13 @@ var L09;
         /*console.log("test: " + dieAufgaben[i].status); */
         dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
         zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
+    }
+    //der Zähler, der die Aufgaben trackt
+    function langsamHabeIchGenugVonDieserAufgabe() {
+        zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
+        if (dieAufgaben.length == 1) {
+            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+        }
     }
 })(L09 || (L09 = {}));
 //# sourceMappingURL=typecript9.js.map
