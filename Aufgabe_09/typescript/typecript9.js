@@ -57,9 +57,9 @@ var L09;
             todos.classList.add("taskElement");
             todos.innerHTML =
                 dieAufgaben[i].content +
-                    "<span class='delete fas fa-trash'></span><span class='checkbox " +
+                    "<span class='delete fas fa-trash'></span><span class='checkbox " + //der Mülleimer und die Checkboc
                     dieAufgaben[i].status +
-                    "'><i class='fas fa-check'></i></span>";
+                    "'><i class='fas fa-check'></i></span>"; //das Häkchen
             todos.querySelector(".checkbox").addEventListener("click", function () {
                 wechselStatus(i);
             });
@@ -70,8 +70,9 @@ var L09;
             _loop_1(i);
         }
         function wechselStatus(i) {
-            dieAufgaben[i].status = !dieAufgaben[i].status;
-            zeigeAufgaben();
+            if (dieAufgaben[i].status == false) {
+                console.log(dieAufgaben[i].status);
+            }
         }
     }
 })(L09 || (L09 = {}));
