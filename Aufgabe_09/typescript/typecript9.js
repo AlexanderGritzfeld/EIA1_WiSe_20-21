@@ -1,8 +1,6 @@
 // Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
 var L09;
 (function (L09) {
-    /*Index
-    let index: number = 0; */
     //und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen
     var dieAufgaben = [
         {
@@ -33,10 +31,10 @@ var L09;
     });
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
-        console.log("Du hast geklickt/ gedrückt");
+        /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             var newContent = add.value;
-            console.log("In dem Feld stand was, also arbeite ich weiter");
+            /* console.log("In dem Feld stand was, also arbeite ich weiter");*/
             var newAufgabe = {
                 content: newContent,
                 status: false
@@ -44,15 +42,14 @@ var L09;
             dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
-            console.log(dieAufgaben[2].content);
+            /* console.log("test: " + dieAufgaben[2].content);*/
         }
     }
-    //Funktion zum Anmzeigen der Aufgaben
+    //Funktion zum Anzeigen der Aufgaben
     function zeigeAufgaben() {
         taskElement.innerHTML = ""; //das macht, das nicht bei jeder neuen Aufgabe, die vorherigen Aufgaben mitdazukommen
-        console.log("zeigeAufgaben wird ausgeführt");
         var _loop_1 = function (i) {
-            console.log("Bedingung ist erfüllt");
+            /* console.log("test: Bedingung ist erfüllt"); */
             var todos = document.createElement("div"); //der "Rahmen"
             todos.classList.add("taskElement");
             todos.innerHTML =
@@ -63,17 +60,24 @@ var L09;
             todos.querySelector(".checkbox").addEventListener("click", function () {
                 wechselStatus(i);
             });
+            todos.querySelector(".delete").addEventListener("click", function () {
+                bringDenMüllNachDraußen(i);
+            });
             taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
         };
-        /* taskElement.innerHTML = ""; */ //was macht das?
+        /* console.log("test: zeigeAufgaben wird ausgeführt"); */
         for (var i = 0; i < dieAufgaben.length; i++) {
             _loop_1(i);
         }
-        function wechselStatus(i) {
-            if (dieAufgaben[i].status == false) {
-                console.log(dieAufgaben[i].status);
-            }
-        }
+    }
+    function bringDenMüllNachDraußen(i) {
+        dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
+        zeigeAufgaben(); //hierdurch wir das in html übernommen
+    }
+    function wechselStatus(i) {
+        /*console.log("test: " + dieAufgaben[i].status); */
+        dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
+        zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
     }
 })(L09 || (L09 = {}));
 //# sourceMappingURL=typecript9.js.map
