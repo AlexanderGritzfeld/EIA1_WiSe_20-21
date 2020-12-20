@@ -48,3 +48,8 @@ h2 {
 #hinzu:hover {
 background-color: rgb(150, 150, 150);
 }
+
+.taskElement {
+background-color: white;
+text-align: left !important;
+}
