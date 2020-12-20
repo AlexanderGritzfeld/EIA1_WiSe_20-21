@@ -91,6 +91,10 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
             if (dieAufgaben.length == 1) {
                 zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+                if (dieAufgaben.length > 10) {
+                     alert("typischer Studentenalltag");
+                     if (allTasks.length > 20) {
+                        alert("Die Zeit vor Abgaben...");
             }
         }
 }
