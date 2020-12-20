@@ -1,15 +1,15 @@
 // Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
 namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
-    //Index
-    let index: number = 0;
+    /*Index
+    let index: number = 0; */
 
     //Interface für Objekte der Aufgabe(n)
     interface Aufgabe {
     content: string; //Was drinne steht
     status: boolean; //für dat Häkchen
 }
-//und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen7
+//und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen
     let dieAufgaben: Aufgabe[]  = [
 {
     content: "Schöne Feiertage haben.",
@@ -21,18 +21,19 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 }
 ];
 //jetzt definieren wir/ beziehen uns auf HTMLElemente
-    let newtask: HTMLInputElement;
+    let add: HTMLInputElement;
     let hinzu: HTMLElement;
     let taskElement: HTMLElement;
     let zähler: HTMLElement;
     
-    newtask = document.querySelector("#newtask");
+    add = document.querySelector("#add");
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
 
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
+    
     //aber soll ja auch durch "Enter" hizufügen, also:
     document.addEventListener("keydown", function (pressed: KeyboardEvent): void {
         if (pressed.keyCode === 13) { //keyCode scheint veraltet zu sein, aber was soll ich sonst nehmen?
@@ -40,26 +41,37 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         }
     });
 
-    //Funktion zum Anmzeigen der Aufgaben
-    function zeigeAufgaben(): void {
-        for (let i: number = 0; i < dieAufgaben.length; i++) {
-            let todos: HTMLElement = document.createElement("div"); //der "Rahmen"
-            todos.classList.add("taskElement");
-            
-        }
-    }
-
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask(): void {
-        if (newtask.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
-            let newContent: string = newtask.value;
+        console.log("Du hast geklickt/ gedrückt");
+        if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
+            let newContent: string = add.value;
+            console.log("In dem Feld stand was, also arbeite ich weiter");
             const newAufgabe: Aufgabe = {
                 content: newContent,
                 status: false
             };
             dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
-            newtask.value = ""; //setzt Input-Feld wieder leer
+           /* newtask.value = ""; //setzt Input-Feld wieder leer */
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
+            console.log(dieAufgaben[2].content);
         }
+    }
+    //Funktion zum Anmzeigen der Aufgaben
+    function zeigeAufgaben(): void {
+
+        console.log("zeigeAufgaben wird ausgeführt");
+        /* taskElement.innerHTML = ""; */ //was macht das?
+        for (let i: number = 0; i < dieAufgaben.length; i++) {
+            console.log("Bedingung ist erfüllt");
+            let todos: HTMLElement = document.createElement("div"); //der "Rahmen"
+            todos.classList.add("taskElement");
+            todos.innerHTML =
+            dieAufgaben[i].content +
+            dieAufgaben[i].status;
+
+            taskElement.appendChild(todos);
+        }
+        
     }
 }
