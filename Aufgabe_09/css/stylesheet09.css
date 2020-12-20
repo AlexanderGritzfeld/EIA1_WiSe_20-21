@@ -60,6 +60,10 @@ width: 510px;
 
 .delete{
     opacity: 0.7;
+    position: absolute;
+    left: 525px;
+    top: 17px;
+    font-size: 26px;
 }
 
 .delete:hover{
@@ -80,4 +84,8 @@ width: 510px;
     position: relative;
     left: 7px;
     top: 7px;
+}
+
+.checkbox.false i{
+    display: none;
 }
