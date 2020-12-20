@@ -56,6 +56,7 @@ position: relative;
 border-radius: 3px;
 position: relative;
 width: 510px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .delete{
@@ -68,6 +69,8 @@ width: 510px;
 
 .delete:hover{
     opacity: 1;
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .checkbox {
@@ -78,6 +81,11 @@ width: 510px;
     border-radius: 150px;
     width: 30px;
     height: 30px;
+}
+
+.checkbox:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .checkbox i{
