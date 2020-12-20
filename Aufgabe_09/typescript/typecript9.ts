@@ -6,17 +6,9 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     content: string; //Was drinne steht
     status: boolean; //für dat Häkchen
 }
-//und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen
-    let dieAufgaben: Aufgabe[]  = [
-{
-    content: "Schöne Feiertage haben.",
-    status: false
-},
-{
-    content: "Dieser Aufgabe als gut empfinden. :)",
-    status: true
-}
-];
+//Array für die Aufgaben mit dem Typ des Interfaces
+    let dieAufgaben: Aufgabe[]  = [];
+
 //jetzt definieren wir/ beziehen uns auf HTMLElemente
     let add: HTMLInputElement;
     let hinzu: HTMLElement;
@@ -76,8 +68,10 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
                 bringDenMüllNachDraußen(i);
             });
 
-            taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
+            taskElement.appendChild(todos); //das bringt alles zum laufen, also, dass die html Elemente erzeugt werden
         }
+
+        langsamHabeIchGenugVonDieserAufgabe();
         
     }
 
@@ -90,5 +84,13 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
                 /*console.log("test: " + dieAufgaben[i].status); */
                 dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
                 zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
+        }
+
+        //der Zähler, der die Aufgaben trackt
+    function langsamHabeIchGenugVonDieserAufgabe(): void {
+            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
+            if (dieAufgaben.length == 1) {
+                zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+            }
         }
 }
