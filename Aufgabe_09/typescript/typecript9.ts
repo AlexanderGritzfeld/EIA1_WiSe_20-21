@@ -34,10 +34,22 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
     //aber soll ja auch durch "Enter" hizufügen, also:
-    document.addEventListener("keydown", function (pressed:KeyboardEvent): void {
-        if (pressed.keyCode === 13 {
+    document.addEventListener("keydown", function (pressed: KeyboardEvent): void {
+        if (pressed.keyCode === 13) {
             addTask();
         }
     });
-
+    //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
+    function addTask(): void {
+        if (newtask.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
+            let newContent: string = newtask.value;
+            const newAufgabe: Aufgabe = {
+                content: newContent,
+                status: false
+            };
+            alleAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
+            newtask.value = ""; //setzt Input-Feld wieder leer
+            zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
+        }
+    }
 }
