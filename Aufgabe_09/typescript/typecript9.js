@@ -42,23 +42,36 @@ var L09;
                 status: false
             };
             dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
-            /* newtask.value = ""; //setzt Input-Feld wieder leer */
+            add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
             console.log(dieAufgaben[2].content);
         }
     }
     //Funktion zum Anmzeigen der Aufgaben
     function zeigeAufgaben() {
+        taskElement.innerHTML = ""; //das macht, das nicht bei jeder neuen Aufgabe, die vorherigen Aufgaben mitdazukommen
         console.log("zeigeAufgaben wird ausgeführt");
-        /* taskElement.innerHTML = ""; */ //was macht das?
-        for (var i = 0; i < dieAufgaben.length; i++) {
+        var _loop_1 = function (i) {
             console.log("Bedingung ist erfüllt");
             var todos = document.createElement("div"); //der "Rahmen"
             todos.classList.add("taskElement");
             todos.innerHTML =
                 dieAufgaben[i].content +
-                    dieAufgaben[i].status;
-            taskElement.appendChild(todos);
+                    "<span class='delete fas fa-trash'></span><span class='checkbox " +
+                    dieAufgaben[i].status +
+                    "'><i class='fas fa-check'></i></span>";
+            todos.querySelector(".checkbox").addEventListener("click", function () {
+                wechselStatus(i);
+            });
+            taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
+        };
+        /* taskElement.innerHTML = ""; */ //was macht das?
+        for (var i = 0; i < dieAufgaben.length; i++) {
+            _loop_1(i);
+        }
+        function wechselStatus(i) {
+            dieAufgaben[i].status = !dieAufgaben[i].status;
+            zeigeAufgaben();
         }
     }
 })(L09 || (L09 = {}));
