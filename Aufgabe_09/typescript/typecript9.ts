@@ -1,9 +1,6 @@
 // Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
 namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
-    /*Index
-    let index: number = 0; */
-
     //Interface für Objekte der Aufgabe(n)
     interface Aufgabe {
     content: string; //Was drinne steht
@@ -43,10 +40,10 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask(): void {
-        console.log("Du hast geklickt/ gedrückt");
+        /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             let newContent: string = add.value;
-            console.log("In dem Feld stand was, also arbeite ich weiter");
+            /* console.log("In dem Feld stand was, also arbeite ich weiter");*/
             const newAufgabe: Aufgabe = {
                 content: newContent,
                 status: false
@@ -54,16 +51,15 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
-            console.log(dieAufgaben[2].content);
+            /* console.log("test: " + dieAufgaben[2].content);*/
         }
     }
-    //Funktion zum Anmzeigen der Aufgaben
+    //Funktion zum Anzeigen der Aufgaben
     function zeigeAufgaben(): void {
         taskElement.innerHTML = ""; //das macht, das nicht bei jeder neuen Aufgabe, die vorherigen Aufgaben mitdazukommen
-        console.log("zeigeAufgaben wird ausgeführt");
-        /* taskElement.innerHTML = ""; */ //was macht das?
+        /* console.log("test: zeigeAufgaben wird ausgeführt"); */
         for (let i: number = 0; i < dieAufgaben.length; i++) {
-            console.log("Bedingung ist erfüllt");
+            /* console.log("test: Bedingung ist erfüllt"); */
             let todos: HTMLElement = document.createElement("div"); //der "Rahmen"
             todos.classList.add("taskElement");
             todos.innerHTML =
@@ -76,13 +72,23 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
                 wechselStatus(i);
             });
             
+            todos.querySelector(".delete").addEventListener("click", function (): void {
+                bringDenMüllNachDraußen(i);
+            });
 
             taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
         }
-        function wechselStatus(i: number): void {
-            if (dieAufgaben[i].status == false) {
-                console.log(dieAufgaben[i].status);
-            }
-        }
+        
     }
+
+    function bringDenMüllNachDraußen(i: number): void {
+            dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
+            zeigeAufgaben(); //hierdurch wir das in html übernommen
+    }
+
+    function wechselStatus(i: number): void {
+                /*console.log("test: " + dieAufgaben[i].status); */
+                dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
+                zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
+        }
 }
