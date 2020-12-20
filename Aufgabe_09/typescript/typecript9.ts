@@ -68,9 +68,9 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             todos.classList.add("taskElement");
             todos.innerHTML =
             dieAufgaben[i].content +
-            "<span class='delete fas fa-trash'></span><span class='checkbox " +
+            "<span class='delete fas fa-trash'></span><span class='checkbox " + //der Mülleimer und die Checkboc
             dieAufgaben[i].status +
-            "'><i class='fas fa-check'></i></span>";
+            "'><i class='fas fa-check'></i></span>"; //das Häkchen
 
             todos.querySelector(".checkbox").addEventListener("click", function (): void {
                 wechselStatus(i);
@@ -80,8 +80,9 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             taskElement.appendChild(todos); //das bringt irgendwie alles zum laufen, also, dass die html Elemente erzeugt werden
         }
         function wechselStatus(i: number): void {
-            dieAufgaben[i].status = !dieAufgaben[i].status;
-            zeigeAufgaben();
+            if (dieAufgaben[i].status == false) {
+                console.log(dieAufgaben[i].status);
+            }
         }
     }
 }
