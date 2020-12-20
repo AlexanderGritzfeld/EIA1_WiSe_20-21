@@ -1,9 +1,9 @@
 // Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
 var L09;
 (function (L09) {
-    //Index
-    var index = 0;
-    //und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen7
+    /*Index
+    let index: number = 0; */
+    //und jetzt lasst uns doch spaßeshalber ein paar Aufgaben erstellen
     var dieAufgaben = [
         {
             content: "Schöne Feiertage haben.",
@@ -15,11 +15,11 @@ var L09;
         }
     ];
     //jetzt definieren wir/ beziehen uns auf HTMLElemente
-    var newtask;
+    var add;
     var hinzu;
     var taskElement;
     var zähler;
-    newtask = document.querySelector("#newtask");
+    add = document.querySelector("#add");
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
@@ -31,24 +31,34 @@ var L09;
             addTask();
         }
     });
-    //Funktion zum Anmzeigen der Aufgaben
-    function zeigeAufgaben() {
-        for (var i = 0; i < dieAufgaben.length; i++) {
-            var todos = document.createElement("div"); //der "Rahmen"
-            todos.classList.add("taskElement");
-        }
-    }
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
-        if (newtask.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
-            var newContent = newtask.value;
+        console.log("Du hast geklickt/ gedrückt");
+        if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
+            var newContent = add.value;
+            console.log("In dem Feld stand was, also arbeite ich weiter");
             var newAufgabe = {
                 content: newContent,
                 status: false
             };
             dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
-            newtask.value = ""; //setzt Input-Feld wieder leer
+            /* newtask.value = ""; //setzt Input-Feld wieder leer */
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
+            console.log(dieAufgaben[2].content);
+        }
+    }
+    //Funktion zum Anmzeigen der Aufgaben
+    function zeigeAufgaben() {
+        console.log("zeigeAufgaben wird ausgeführt");
+        /* taskElement.innerHTML = ""; */ //was macht das?
+        for (var i = 0; i < dieAufgaben.length; i++) {
+            console.log("Bedingung ist erfüllt");
+            var todos = document.createElement("div"); //der "Rahmen"
+            todos.classList.add("taskElement");
+            todos.innerHTML =
+                dieAufgaben[i].content +
+                    dieAufgaben[i].status;
+            taskElement.appendChild(todos);
         }
     }
 })(L09 || (L09 = {}));
