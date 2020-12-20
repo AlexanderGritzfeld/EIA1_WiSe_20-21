@@ -93,7 +93,7 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
                 zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
                 if (dieAufgaben.length > 10) {
                      alert("typischer Studentenalltag");
-                     if (allTasks.length > 20) {
+                     if (dieAufgaben.length > 20) {
                         alert("Die Zeit vor Abgaben...");
             }
         }
