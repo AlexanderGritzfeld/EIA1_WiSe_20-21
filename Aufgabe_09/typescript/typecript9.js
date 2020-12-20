@@ -31,5 +31,18 @@ var L09;
             addTask();
         }
     });
+    //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
+    function addTask() {
+        if (newtask.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
+            var newContent = newtask.value;
+            var newAufgabe = {
+                content: newContent,
+                status: false
+            };
+            alleAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
+            newtask.value = ""; //setzt Input-Feld wieder leer
+            zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
+        }
+    }
 })(L09 || (L09 = {}));
 //# sourceMappingURL=typecript9.js.map
