@@ -21,16 +21,23 @@ var L09;
     var zähler;
     newtask = document.querySelector("#newtask");
     hinzu = document.querySelector("#hinzu");
-    taskElement = document.querySelector("tasks");
+    taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
     //aber soll ja auch durch "Enter" hizufügen, also:
     document.addEventListener("keydown", function (pressed) {
-        if (pressed.keyCode === 13) {
+        if (pressed.keyCode === 13) { //keyCode scheint veraltet zu sein, aber was soll ich sonst nehmen?
             addTask();
         }
     });
+    //Funktion zum Anmzeigen der Aufgaben
+    function zeigeAufgaben() {
+        for (var i = 0; i < dieAufgaben.length; i++) {
+            var todos = document.createElement("div"); //der "Rahmen"
+            todos.classList.add("taskElement");
+        }
+    }
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
         if (newtask.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
@@ -39,7 +46,7 @@ var L09;
                 content: newContent,
                 status: false
             };
-            alleAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
+            dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             newtask.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
         }
