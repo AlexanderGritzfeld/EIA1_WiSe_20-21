@@ -30,7 +30,7 @@ var L10;
                 content: newContent,
                 status: false
             };
-            dieAufgaben.push(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
+            dieAufgaben.unshift(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
             /* console.log("test: " + dieAufgaben[2].content);*/
