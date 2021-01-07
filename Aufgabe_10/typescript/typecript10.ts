@@ -1,5 +1,5 @@
-// Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
-namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
+//größtenteils von Aufgabe 09 rüberkopiert
+namespace L10 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
     //Interface für Objekte der Aufgabe(n)
     interface Aufgabe {
@@ -35,7 +35,7 @@ namespace L09 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             let newContent: string = add.value;
-            /* console.log("In dem Feld stand was, also arbeite ich weiter");*/
+            /* console.log("In dem Feld stand was, also arbeite ich weiter")*/
             const newAufgabe: Aufgabe = {
                 content: newContent,
                 status: false
