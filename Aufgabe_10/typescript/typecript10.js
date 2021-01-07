@@ -1,6 +1,6 @@
-// Eine zusätzliche Aufgabe, in der wir eine Anwendung programmieren sollen, welche uns helfen soll nicht mit unseren Aufgabe überfordert zu sein
-var L09;
-(function (L09) {
+//größtenteils von Aufgabe 09 rüberkopiert
+var L10;
+(function (L10) {
     //Array für die Aufgaben mit dem Typ des Interfaces
     var dieAufgaben = [];
     //jetzt definieren wir/ beziehen uns auf HTMLElemente
@@ -25,7 +25,7 @@ var L09;
         /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             var newContent = add.value;
-            /* console.log("In dem Feld stand was, also arbeite ich weiter");*/
+            /* console.log("In dem Feld stand was, also arbeite ich weiter")*/
             var newAufgabe = {
                 content: newContent,
                 status: false
@@ -78,5 +78,5 @@ var L09;
             zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
         }
     }
-})(L09 || (L09 = {}));
+})(L10 || (L10 = {}));
 //# sourceMappingURL=typecript10.js.map
