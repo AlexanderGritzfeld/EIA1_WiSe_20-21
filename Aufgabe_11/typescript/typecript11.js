@@ -94,6 +94,10 @@ var L11;
         if (counter == 1) {
             zählerNoch.innerHTML = "<i>" + counter + "</i> Aufgabe ist";
         }
+        zählerErledigt.innerHTML = "<i>" + (dieAufgaben.length - counter) + "<i> Aufgaben sind";
+        if ((dieAufgaben.length - counter) == 1) {
+            zählerErledigt.innerHTML = "<i>" + (dieAufgaben.length - counter) + "</i> Aufgabe ist";
+        }
     }
     //Versuchen wir uns mal an die Spracheingabe
     function artyom() {
