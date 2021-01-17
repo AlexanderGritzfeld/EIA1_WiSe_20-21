@@ -20,6 +20,7 @@ var L11;
             addTask();
         }
     });
+    artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
         /*console.log("Du hast geklickt/ gedrückt");*/
@@ -34,7 +35,6 @@ var L11;
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
         }
-        artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
     }
     //Funktion zum Anzeigen der Aufgaben
     function zeigeAufgaben() {
