@@ -14,6 +14,9 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     let hinzu: HTMLElement;
     let taskElement: HTMLElement;
     let zähler: HTMLElement;
+
+    //Artyom muss definiert werden?
+    declare var Artyom: any;
     
     add = document.querySelector("#add");
     hinzu = document.querySelector("#hinzu");
