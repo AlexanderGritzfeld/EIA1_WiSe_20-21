@@ -102,7 +102,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     function artyom(): void {
         const artyom: any = new Artyom();
 
-        artyom.addTask({
+        artyom.addCommands({
             //Schlüsselwörter, auf die er hört
             indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
             smart: true, //soll mithören und das gesagt dann später in string umwandeln
