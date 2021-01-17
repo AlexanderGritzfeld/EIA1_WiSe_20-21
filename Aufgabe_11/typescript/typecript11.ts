@@ -33,6 +33,8 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         }
     });
 
+    artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
+    
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask(): void {
         /*console.log("Du hast geklickt/ gedrückt");*/
@@ -48,8 +50,9 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
 
         }
-        artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
+
     }
+
     //Funktion zum Anzeigen der Aufgaben
     function zeigeAufgaben(): void {
         taskElement.innerHTML = ""; //das macht, das nicht bei jeder neuen Aufgabe, die vorherigen Aufgaben mitdazukommen
