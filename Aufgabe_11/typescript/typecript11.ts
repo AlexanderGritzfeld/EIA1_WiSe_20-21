@@ -83,7 +83,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     function artyom(): void {
         const artyom: any = new Artyom();
 
-        artyom.addComands({
+        artyom.addTask({
             //Schlüsselwörter, auf die er hört
             indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
             smart: true, //soll mithören und das gesagt dann später in string umwandeln
@@ -91,13 +91,31 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             action: function (i: number, wildcard: string): void {
                 const newVoiceAufgabe: Aufgabe ={
                     content: wildcard, //das, was nach dem Schlüsselwort folgt
-                    status: false,    
+                    status: false   
                 };
                 dieAufgaben.unshift(newVoiceAufgabe);
                 zeigeAufgaben();
             }
         });
+//jetzt legen wir ein paar Sachen für den Artyom fest
+        function startPermaArtyom(): void {
+            artyom.fatality();
+
+            setTimeout(function (): void {
+                artyom
+                .initialize({
+                    lang: "de-DE",
+                    continous: true,
+                    listen: true,
+                    interimResult: true,
+                    debug: false
+                });
+            },         250);
+        }
+        startPermaArtyom();
     }
+                
+    
 
 
     function bringDenMüllNachDraußen(i: number): void {
