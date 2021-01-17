@@ -62,6 +62,22 @@ var L11;
         }
         langsamHabeIchGenugVonDieserAufgabe();
     }
+    function bringDenMüllNachDraußen(i) {
+        dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
+        zeigeAufgaben(); //hierdurch wir das in html übernommen
+    }
+    function wechselStatus(i) {
+        /*console.log("test: " + dieAufgaben[i].status); */
+        dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
+        zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
+    }
+    //der Zähler, der die Aufgaben trackt
+    function langsamHabeIchGenugVonDieserAufgabe() {
+        zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
+        if (dieAufgaben.length == 1) {
+            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+        }
+    }
     //Versuchen wir uns mal an die Spracheingabe
     function artyom() {
         var artyom = new Artyom();
@@ -94,22 +110,6 @@ var L11;
             }, 250);
         }
         startPermaArtyom();
-    }
-    function bringDenMüllNachDraußen(i) {
-        dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
-        zeigeAufgaben(); //hierdurch wir das in html übernommen
-    }
-    function wechselStatus(i) {
-        /*console.log("test: " + dieAufgaben[i].status); */
-        dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
-        zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
-    }
-    //der Zähler, der die Aufgaben trackt
-    function langsamHabeIchGenugVonDieserAufgabe() {
-        zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
-        if (dieAufgaben.length == 1) {
-            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
-        }
     }
 })(L11 || (L11 = {}));
 //# sourceMappingURL=typecript11.js.map
