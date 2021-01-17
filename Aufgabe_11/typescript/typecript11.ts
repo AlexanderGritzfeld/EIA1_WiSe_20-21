@@ -46,8 +46,9 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             dieAufgaben.unshift(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
-            artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
+
         }
+        artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
     }
     //Funktion zum Anzeigen der Aufgaben
     function zeigeAufgaben(): void {
