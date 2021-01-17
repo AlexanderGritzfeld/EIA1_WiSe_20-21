@@ -14,6 +14,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     let hinzu: HTMLElement;
     let taskElement: HTMLElement;
     let zähler: HTMLElement;
+    let artyomKnopf: HTMLElement;
 
     //Artyom muss definiert werden?
     declare var Artyom: any;
@@ -22,6 +23,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
+    artyomKnopf = document.querySelector("#artyomKnopf");
 
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
@@ -32,9 +34,9 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             addTask();
         }
     });
+    //führt Artyom aus/ sagt ihm er soll sich bereit halten
+    artyomKnopf.addEventListener("click", artyom);
 
-    artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
-    
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask(): void {
         /*console.log("Du hast geklickt/ gedrückt");*/
