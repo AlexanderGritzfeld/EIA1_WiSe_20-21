@@ -83,7 +83,7 @@ var L11;
         var counter = 0;
         for (var i = 0; i < dieAufgaben.length; ++i) {
             if (dieAufgaben[i].status == false) {
-                counter++;
+                counter++; //wenn Aufgabe nicht erledigt --> Zähler +1
             }
         }
         zähler.innerHTML = "<i>" + dieAufgaben.length + "<i> Aufgaben sind";
