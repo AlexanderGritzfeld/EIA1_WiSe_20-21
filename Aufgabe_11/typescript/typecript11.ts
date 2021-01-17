@@ -104,7 +104,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         let counter: number = 0;
         for (var i: number = 0; i < dieAufgaben.length; ++i) {
             if (dieAufgaben[i].status == false) {
-                counter++;
+                counter++; //wenn Aufgabe nicht erledigt --> Zähler +1
             }
         }
         zähler.innerHTML = "<i>" + dieAufgaben.length + "<i> Aufgaben sind";
