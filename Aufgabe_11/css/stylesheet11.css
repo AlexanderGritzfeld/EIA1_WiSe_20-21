@@ -46,6 +46,13 @@ h2 {
     font-size: 15px;
 }
 
+#artyomKnopf {
+    background-color: darkgrey;
+    border: 2px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 #hinzu:hover {
 background-color: rgb(150, 150, 150);
 }
