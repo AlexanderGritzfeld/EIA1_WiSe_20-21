@@ -1,5 +1,5 @@
-//größtenteils von Aufgabe 09 rüberkopiert
-namespace L10 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
+//größtenteils von Aufgabe 09/10 rüberkopiert
+namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
     //Interface für Objekte der Aufgabe(n)
     interface Aufgabe {
@@ -43,7 +43,7 @@ namespace L10 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             dieAufgaben.unshift(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
-            /* console.log("test: " + dieAufgaben[2].content);*/
+            artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
         }
     }
     //Funktion zum Anzeigen der Aufgaben
@@ -74,6 +74,28 @@ namespace L10 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         langsamHabeIchGenugVonDieserAufgabe();
         
     }
+
+    //Versuchen wir uns mal an die Spracheingabe
+
+    function artyom(): void {
+        const artyom: any = new Artyom();
+
+        artyom.addComands({
+            //Schlüsselwörter, auf die er hört
+            indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
+            smart: true, //soll mithören und das gesagt dann später in string umwandeln
+            //und dass soll er machen
+            action: function (i: number, wildcard: string): void {
+                const newVoiceAufgabe: Aufgabe ={
+                    content: wildcard, //das, was nach dem Schlüsselwort folgt
+                    status: false,    
+                };
+                dieAufgaben.unshift(newVoiceAufgabe);
+                zeigeAufgaben();
+            }
+        });
+    }
+
 
     function bringDenMüllNachDraußen(i: number): void {
             dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
