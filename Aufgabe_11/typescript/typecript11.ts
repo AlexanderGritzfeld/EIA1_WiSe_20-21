@@ -14,6 +14,8 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     let hinzu: HTMLElement;
     let taskElement: HTMLElement;
     let zähler: HTMLElement;
+    let zählerErledigt: HTMLElement;
+    let zählerNoch: HTMLElement;
     let artyomKnopf: HTMLElement;
 
     //Artyom muss definiert werden?
@@ -23,6 +25,8 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
+    zählerErledigt = document.querySelector("#zählerErledigt");
+    zählerNoch = document.querySelector("#zählerNoch");
     artyomKnopf = document.querySelector("#artyomKnopf");
 
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
@@ -97,12 +101,22 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
         //der Zähler, der die Aufgaben trackt
     function langsamHabeIchGenugVonDieserAufgabe(): void {
-            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
-            if (dieAufgaben.length == 1) {
-                zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+        let counter: number = 0;
+        for (var i: number = 0; i < dieAufgaben.length; ++i) {
+            if (dieAufgaben[i].status == false) {
+                counter++;
             }
         }
-
+        zähler.innerHTML = "<i>" + dieAufgaben.length + "<i> Aufgaben sind";
+        if (dieAufgaben.length == 1) {
+                zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+            }
+        zählerNoch.innerHTML = "<i>" + counter + "<i> Aufgaben sind";   
+        if (counter == 1) {
+            zählerNoch.innerHTML = "<i>" + counter + "</i> Aufgabe ist";
+        }
+         
+        }
     //Versuchen wir uns mal an die Spracheingabe
 
     function artyom(): void {
@@ -114,7 +128,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
             smart: true, //soll mithören und das gesagt dann später in string umwandeln
             //und dass soll er machen
             action: function (i: number, wildcard: string): void {
-                const newVoiceAufgabe: Aufgabe ={
+                const newVoiceAufgabe: Aufgabe = {
                     content: wildcard, //das, was nach dem Schlüsselwort folgt
                     status: false   
                 };
@@ -122,7 +136,7 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
                 zeigeAufgaben();
             }
         });
-//jetzt legen wir ein paar Sachen für den Artyom fest
+//jetzt legen wir ein paar Sachen für den Artyom fest- so z.B. ob man immer die Berechtigung geben soll usw...
         function startPermaArtyom(): void {
             artyom.fatality();
 
