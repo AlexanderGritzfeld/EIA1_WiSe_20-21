@@ -81,7 +81,7 @@ var L11;
     //Versuchen wir uns mal an die Spracheingabe
     function artyom() {
         var artyom = new Artyom();
-        artyom.addTask({
+        artyom.addCommands({
             //Schlüsselwörter, auf die er hört
             indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
             smart: true,
