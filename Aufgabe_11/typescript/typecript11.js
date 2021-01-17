@@ -8,10 +8,12 @@ var L11;
     var hinzu;
     var taskElement;
     var zähler;
+    var artyomKnopf;
     add = document.querySelector("#add");
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
+    artyomKnopf = document.querySelector("#artyomKnopf");
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
     //aber soll ja auch durch "Enter" hizufügen, also:
@@ -20,7 +22,8 @@ var L11;
             addTask();
         }
     });
-    artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
+    //führt Artyom aus/ sagt ihm er soll sich bereit halten
+    artyomKnopf.addEventListener("click", artyom);
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
         /*console.log("Du hast geklickt/ gedrückt");*/
