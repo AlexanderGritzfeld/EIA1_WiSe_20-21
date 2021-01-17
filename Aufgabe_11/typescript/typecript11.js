@@ -8,11 +8,15 @@ var L11;
     var hinzu;
     var taskElement;
     var zähler;
+    var zählerErledigt;
+    var zählerNoch;
     var artyomKnopf;
     add = document.querySelector("#add");
     hinzu = document.querySelector("#hinzu");
     taskElement = document.querySelector(".tasks");
     zähler = document.querySelector("#zähler");
+    zählerErledigt = document.querySelector("#zählerErledigt");
+    zählerNoch = document.querySelector("#zählerNoch");
     artyomKnopf = document.querySelector("#artyomKnopf");
     //Bei Knopfdruck wir Funktion aufgerufen, die Aufgabe hinzufügt
     hinzu.addEventListener("click", addTask);
@@ -76,9 +80,19 @@ var L11;
     }
     //der Zähler, der die Aufgaben trackt
     function langsamHabeIchGenugVonDieserAufgabe() {
-        zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
+        var counter = 0;
+        for (var i = 0; i < dieAufgaben.length; ++i) {
+            if (dieAufgaben[i].status == false) {
+                counter++;
+            }
+        }
+        zähler.innerHTML = "<i>" + dieAufgaben.length + "<i> Aufgaben sind";
         if (dieAufgaben.length == 1) {
             zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+        }
+        zählerNoch.innerHTML = "<i>" + counter + "<i> Aufgaben sind";
+        if (counter == 1) {
+            zählerNoch.innerHTML = "<i>" + counter + "</i> Aufgabe ist";
         }
     }
     //Versuchen wir uns mal an die Spracheingabe
@@ -98,7 +112,7 @@ var L11;
                 zeigeAufgaben();
             }
         });
-        //jetzt legen wir ein paar Sachen für den Artyom fest
+        //jetzt legen wir ein paar Sachen für den Artyom fest- so z.B. ob man immer die Berechtigung geben soll usw...
         function startPermaArtyom() {
             artyom.fatality();
             setTimeout(function () {
