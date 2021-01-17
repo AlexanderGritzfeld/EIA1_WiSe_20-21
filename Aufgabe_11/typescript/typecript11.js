@@ -1,6 +1,6 @@
-//größtenteils von Aufgabe 09 rüberkopiert
-var L10;
-(function (L10) {
+//größtenteils von Aufgabe 09/10 rüberkopiert
+var L11;
+(function (L11) {
     //Array für die Aufgaben mit dem Typ des Interfaces
     var dieAufgaben = [];
     //jetzt definieren wir/ beziehen uns auf HTMLElemente
@@ -33,7 +33,7 @@ var L10;
             dieAufgaben.unshift(newAufgabe); //das fügt die neue Aufgabe zum Array hinzu
             add.value = ""; //setzt Input-Feld wieder leer
             zeigeAufgaben(); //soll Funktion abspielen, welche unsere neue Aufgabe zeigen soll
-            /* console.log("test: " + dieAufgaben[2].content);*/
+            artyom(); //führt Artyom aus/ sagt ihm er soll sich bereit halten
         }
     }
     //Funktion zum Anzeigen der Aufgaben
@@ -62,6 +62,24 @@ var L10;
         }
         langsamHabeIchGenugVonDieserAufgabe();
     }
+    //Versuchen wir uns mal an die Spracheingabe
+    function artyom() {
+        var artyom = new Artyom();
+        artyom.addComands({
+            //Schlüsselwörter, auf die er hört
+            indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
+            smart: true,
+            //und dass soll er machen
+            action: function (i, wildcard) {
+                var newVoiceAufgabe = {
+                    content: wildcard,
+                    status: false,
+                };
+                dieAufgaben.unshift(newVoiceAufgabe);
+                zeigeAufgaben();
+            }
+        });
+    }
     function bringDenMüllNachDraußen(i) {
         dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
         zeigeAufgaben(); //hierdurch wir das in html übernommen
@@ -78,5 +96,5 @@ var L10;
             zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
         }
     }
-})(L10 || (L10 = {}));
+})(L11 || (L11 = {}));
 //# sourceMappingURL=typecript11.js.map
