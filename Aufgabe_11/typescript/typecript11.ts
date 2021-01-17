@@ -78,6 +78,25 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         
     }
 
+    function bringDenMüllNachDraußen(i: number): void {
+            dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
+            zeigeAufgaben(); //hierdurch wir das in html übernommen
+    }
+
+    function wechselStatus(i: number): void {
+                /*console.log("test: " + dieAufgaben[i].status); */
+                dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
+                zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
+        }
+
+        //der Zähler, der die Aufgaben trackt
+    function langsamHabeIchGenugVonDieserAufgabe(): void {
+            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
+            if (dieAufgaben.length == 1) {
+                zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
+            }
+        }
+
     //Versuchen wir uns mal an die Spracheingabe
 
     function artyom(): void {
@@ -114,26 +133,4 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
         }
         startPermaArtyom();
     }
-                
-    
-
-
-    function bringDenMüllNachDraußen(i: number): void {
-            dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
-            zeigeAufgaben(); //hierdurch wir das in html übernommen
-    }
-
-    function wechselStatus(i: number): void {
-                /*console.log("test: " + dieAufgaben[i].status); */
-                dieAufgaben[i].status = !dieAufgaben[i].status; //switcht boolean
-                zeigeAufgaben(); //dadurch wird true/ false auch im html Code übertragen
-        }
-
-        //der Zähler, der die Aufgaben trackt
-    function langsamHabeIchGenugVonDieserAufgabe(): void {
-            zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgaben sind"; //italic, weil wenn ich <p> nehme bricht der mir in der Zeile weg
-            if (dieAufgaben.length == 1) {
-                zähler.innerHTML = "<i>" + dieAufgaben.length + "</i> Aufgabe ist";
-            }
-        }
 }
