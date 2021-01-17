@@ -65,7 +65,7 @@ var L11;
     //Versuchen wir uns mal an die Spracheingabe
     function artyom() {
         var artyom = new Artyom();
-        artyom.addComands({
+        artyom.addTask({
             //Schlüsselwörter, auf die er hört
             indexes: ["erstelle Aufgabe *", "erstelle eine neue Aufgabe *", "add new task *"],
             smart: true,
@@ -73,12 +73,27 @@ var L11;
             action: function (i, wildcard) {
                 var newVoiceAufgabe = {
                     content: wildcard,
-                    status: false,
+                    status: false
                 };
                 dieAufgaben.unshift(newVoiceAufgabe);
                 zeigeAufgaben();
             }
         });
+        //jetzt legen wir ein paar Sachen für den Artyom fest
+        function startPermaArtyom() {
+            artyom.fatality();
+            setTimeout(function () {
+                artyom
+                    .initialize({
+                    lang: "de-DE",
+                    continous: true,
+                    listen: true,
+                    interimResult: true,
+                    debug: false
+                });
+            }, 250);
+        }
+        startPermaArtyom();
     }
     function bringDenMüllNachDraußen(i) {
         dieAufgaben.splice(i, 1); //entfernt die ausgewählte Aufgabe im Array
