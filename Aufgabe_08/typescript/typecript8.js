@@ -111,6 +111,7 @@ var L08;
     myTrashBtn.addEventListener("click", function () {
         myArray = [];
     });
+    console.log(myArray[0]);
     //Wechsel von Aufnehmen zu Nicht-Aufnehmen und andersrum
     myRecBtn.addEventListener("click", function () {
         //wenn auf Klick die Klasse "inactive" besteht, dann soll diese durch "active" ersetzt werden
