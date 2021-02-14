@@ -43,10 +43,8 @@ namespace L11 { //damit es nicht rummeckert, dass ich Namen schon vergeben habe
 
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask(): void {
-        /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             let newContent: string = add.value;
-            /* console.log("In dem Feld stand was, also arbeite ich weiter")*/
             const newAufgabe: Aufgabe = {
                 content: newContent,
                 status: false
