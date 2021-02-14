@@ -30,10 +30,8 @@ var L11;
     artyomKnopf.addEventListener("click", artyom);
     //das sollte jetzt die Aufgaben hinzufügen, aber noch nicht darstellen
     function addTask() {
-        /*console.log("Du hast geklickt/ gedrückt");*/
         if (add.value != "") { //wenn das Eingabefeld nicht leer ist, solst du folgendes machen
             var newContent = add.value;
-            /* console.log("In dem Feld stand was, also arbeite ich weiter")*/
             var newAufgabe = {
                 content: newContent,
                 status: false
