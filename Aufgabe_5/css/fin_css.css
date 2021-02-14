@@ -16,10 +16,29 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container {
+.chat {
     position: relative;
-    width: 650px;
+    left: -600px;
+    width: 300px;
     height: 650px;
+    background-color: darkgrey;
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-size: 15px;
+
+
+}
+
+.chatchat {
+    position: relative;
+    width: 280px;
+    height: 40px;
+    left: 25px;
+    background-color: 100, 100, 100;
+    border: 2px solid 80, 80, 80;
+    z-index: 2;
+
 }
 
 .container div{
