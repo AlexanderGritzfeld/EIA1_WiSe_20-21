@@ -1,8 +1,6 @@
 html, body {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 html {
@@ -18,7 +16,7 @@ h2 {
 
 .chat {
     position: relative;
-    left: -600px;
+    left: 20px;
     width: 300px;
     height: 650px;
     background-color: darkgrey;
@@ -34,85 +32,99 @@ h2 {
     position: relative;
     width: 280px;
     height: 40px;
-    left: 25px;
-    background-color: 100, 100, 100;
-    border: 2px solid 80, 80, 80;
+    left: 8px;
+    margin-top: 10px;
+    background-color: rgb(92, 92, 92);
+    border: 4px solid rgb(80, 80, 80);
     z-index: 2;
-
 }
 
-.container div{
-    display: inline-block;
-    margin: 5px;
-}
-
-#add {
-    width: 500px;
-    height: 50px;
-    align-items: center;
-    border-radius: 10px;
-    font-size: 15px;
-    padding-left: 5px;
-}
-#hinzu {
-    background-color: darkgrey;
-    border: 2px solid gray;
-    border-radius: 3px;
-    cursor: pointer;
-    height: 50px;
-    margin-left: 10px;
-    font-size: 15px;
-}
-
-#hinzu:hover {
-background-color: rgb(150, 150, 150);
-}
-
-.taskElement {
-background-color: white;
-padding: 20px 50px 20px 50px;
-position: relative;
-border-radius: 3px;
-position: relative;
-width: 510px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.delete{
-    opacity: 0.7;
-    position: absolute;
-    left: 525px;
-    top: 17px;
-    font-size: 26px;
-}
-
-.delete:hover{
-    opacity: 1;
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.checkbox {
-    position: absolute;
-    right: 15px;
-    top: 14px;
-    border: 3px solid rgb(63, 63, 63);
-    border-radius: 150px;
-    width: 30px;
-    height: 30px;
-}
-
-.checkbox:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-.checkbox i{
+.chatchat h2 {
     position: relative;
-    left: 7px;
-    top: 7px;
+    left: 5px;
+    margin-top: 10px;
 }
 
-.checkbox.false i{
+.reihe {
+    position: relative;
+    text-align: center;
+}
+.is4 {
+    position: relative;
+    left: 75px;
+}
+.is8 {
+    position: relative;
+    left: 75px;
+}
+.is12 {
+    position: relative;
+    left: 75px;
+}
+.is16 {
+    position: relative;
+    left: 75px;
+}
+.is20 {
+    position: relative;
+    left: 75px;
+}
+.is24 {
+    position: relative;
+    left: 75px;
+}
+.is28 {
+    position: relative;
+    left: 75px;
+}
+.is32 {
+    position: relative;
+    left: 75px;
+}
+
+.karte {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(65, 65, 65);
+    margin-top: 50px;
+    margin-inline-start: 15px;
+    display: inline-block;
+}
+
+.set2 {
+    position:relative;
+    left: 475px;
+    top: -614px;
+}
+
+.is-hidden {
     display: none;
+}
+.challenge {
+    position: absolute;
+    left: 400px;
+    top: 110px;
+}
+.bg_challenge {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+    border-radius: 5px;
+    border: 3px solid blueviolet;
+    text-align: center;
+}
+.auswahl-intro {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.c-bttn button {
+    width: 200px;
+    height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
 }
