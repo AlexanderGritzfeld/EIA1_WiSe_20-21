@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<!--Start Chat für Kurznachrichten und evt. Spielereien-->
     <div class="chat">
         <div class="chatchat">
             <h2><u>Chat</u></h2>  
@@ -20,7 +20,7 @@
       
     </div> <!--Ende Chat-->
 
-
+<!--Start Karten; die eigentlichen Memory Karten-->
     <div class="karten">
         <div class="set1">
             <div class="spalte is4">
@@ -48,6 +48,7 @@
                 <div class="karte"></div>
             </div>
         </div> <!--Ende set1-->
+        <!--verschiedene Sets, damit die auch auf eine Seite passen-->
         <div class="set2">
             <div class="spalte is20">
                 <div class="karte"></div>
@@ -73,16 +74,16 @@
                 <div class="karte"></div>
                 <div class="karte"></div>
             </div>
-        </div> <!--set2-->
+        </div> <!--Ende set2-->
     </div> <!--Ende karten-->
-
+<!--Anfang Pop-up, welches nach der Schwierigkeitsstufe fragt-->
     <div class="challenge">
         <div class="bg_challenge">
             <div class="auswahl-intro"><u> Wählen Sie die Schwierigkeit aus</u></div>
             <div class="c-bttn">
-                <button id="Leicht">Leicht</button>
-                <button id="Mittel">Mittel</button>
-                <button id="Schwierig">Schwierig</button>
+                <button id="leicht" title="4 Kartenpaare">Leicht </button>
+                <button id="mittel" title="8 Kartenpaare">Mittel</button>
+                <button id="schwierig" title="16 Kartenpaare">Schwierig</button>
             </div>
         </div>
     </div> <!--Ende challenge-->
