@@ -89,6 +89,11 @@ h2 {
     margin-top: 50px;
     margin-inline-start: 15px;
     display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.karte:hover {
+    box-shadow: inset 0px 0px 0px 3px pink;
 }
 
 .set2 {
@@ -111,13 +116,13 @@ h2 {
     height: 400px;
     background-color: blue;
     border-radius: 5px;
-    border: 3px solid blueviolet;
+    border: 3px solid black;
     text-align: center;
 }
 .auswahl-intro {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .c-bttn button {
@@ -127,4 +132,24 @@ h2 {
     font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
+}
+#leicht {
+    background-color: pink;
+}
+#leicht:hover {
+    transform: scale(1.05);
+}
+
+#mittel {
+    background-color: rgb(255, 118, 141);
+}
+#mittel:hover {
+    transform: scale(1.05);
+}
+
+#schwierig {
+    background-color: rgb(255, 0, 43);
+}
+#schwierig:hover {
+    transform: scale(1.05);
 }
