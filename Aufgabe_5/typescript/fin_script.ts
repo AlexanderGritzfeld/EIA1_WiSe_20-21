@@ -68,12 +68,18 @@ cBttn.addEventListener("click", function(): void {
 
 }); //Ende CBttn
 
+//jetzt sollen die Karten-Klassen verteilen werden; basierend auf Schwierigkeit
+if (cCheck == 1) {
+//Verteilung wie?
+}
 
-document.querySelector(".chatchat").addEventListener("click", function(): void {
-    console.log(cCheck);
-}); 
+if (cCheck == 2) {
+    //Verteiliung mittel
+}
 
-
+if (cCheck == 3) {
+    //Verteilung schwierig
+}
 
 
 
