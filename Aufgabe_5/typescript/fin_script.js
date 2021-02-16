@@ -45,8 +45,15 @@ var fin;
     cBttn.addEventListener("click", function () {
         challenge.classList.add("is-hidden");
     }); //Ende CBttn
-    document.querySelector(".chatchat").addEventListener("click", function () {
-        console.log(cCheck);
-    });
+    //jetzt sollen die Karten-Klassen verteilen werden; basierend auf Schwierigkeit
+    if (cCheck == 1) {
+        //Verteilung wie?
+    }
+    if (cCheck == 2) {
+        //Verteiliung mittel
+    }
+    if (cCheck == 3) {
+        //Verteilung schwierig
+    }
 })(fin || (fin = {})); //Ende namespace
 //# sourceMappingURL=fin_script.js.map
