@@ -93,7 +93,8 @@ h2 {
     border-radius: 3px;
 }
 .karte:hover {
-    box-shadow: inset 0px 0px 0px 3px pink;
+    transform: scale(1.05);
+    transition: 0.25s;
 }
 
 .set2 {
@@ -105,6 +106,9 @@ h2 {
 .is-hidden {
     display: none;
 }
+
+
+
 .challenge {
     position: absolute;
     left: 400px;
@@ -152,4 +156,57 @@ h2 {
 }
 #schwierig:hover {
     transform: scale(1.05);
+}
+
+
+
+.rot {
+    background-image: url(/Aufgabe_5/images/rot.png);
+}
+
+.hellgrün {
+    background-image: url(/Aufgabe_5/images/hellgrün.png);
+}
+
+.dunkelgrün {
+    background-image: url(/Aufgabe_5/images/dunkelgrün.png);
+}
+
+.hellblau {
+    background-image: url(/Aufgabe_5/images/hellblau.png);
+}
+
+.dunkelblau {
+    background-image: url(/Aufgabe_5/images/dunkelblau.png);
+}
+
+.orange {
+    background-image: url(/Aufgabe_5/images/orange.png);
+}
+
+.braun {
+    background-image: url(/Aufgabe_5/images/braun.png);
+}
+
+.gelb {
+    background-image: url(/Aufgabe_5/images/gelb.png);
+}
+
+.rosa {
+    background-image: url(/Aufgabe_5/images/rosa.png);
+}
+
+.lila {
+    background-image: url(/Aufgabe_5/images/lila.png);
+}
+
+
+.zebra {
+    background-image: url(/Aufgabe_5/images/Zebra.png);
+}
+.kreis {
+    background-image: url(/Aufgabe_5/images/Kreis.png);
+}
+.pfeil_unten {
+    background-image: url(/Aufgabe_5/images/pfeil_unten.png);
 }
