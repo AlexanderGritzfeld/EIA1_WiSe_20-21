@@ -24,11 +24,6 @@ let is16: HTMLElement;
 
 //Karten an sich
 
-/*Interface
-interface memoryL {
-    content: HTMLElement;
-} */
-
 let k1: HTMLElement;
 let k2: HTMLElement;
 let k3: HTMLElement;
@@ -37,10 +32,30 @@ let k5: HTMLElement;
 let k6: HTMLElement;
 let k7: HTMLElement;
 let k8: HTMLElement;
-let memoryL: HTMLElement[] = [k1, k2, k3, k4, k5, k6, k7, k8];
-
-
-
+let k9: HTMLElement;
+let k10: HTMLElement;
+let k11: HTMLElement;
+let k12: HTMLElement;
+let k13: HTMLElement;
+let k14: HTMLElement;
+let k15: HTMLElement;
+let k16: HTMLElement;
+let k17: HTMLElement;
+let k18: HTMLElement;
+let k19: HTMLElement;
+let k20: HTMLElement;
+let k21: HTMLElement;
+let k22: HTMLElement;
+let k23: HTMLElement;
+let k24: HTMLElement;
+let k25: HTMLElement;
+let k26: HTMLElement;
+let k27: HTMLElement;
+let k28: HTMLElement;
+let k29: HTMLElement;
+let k30: HTMLElement;
+let k31: HTMLElement;
+let k32: HTMLElement;
 
 
 challenge = document.querySelector(".challenge");
@@ -58,7 +73,51 @@ is16 = document.querySelector(".is16");
 
 k1 = document.querySelector(".k1");
 k2 = document.querySelector(".k2");
+k3 = document.querySelector(".k3");
+k4 = document.querySelector(".k4");
+k5 = document.querySelector(".k5");
+k6 = document.querySelector(".k6");
+k7 = document.querySelector(".k7");
+k8 = document.querySelector(".k8");
+k9 = document.querySelector(".k9");
+k10 = document.querySelector(".k10");
+k11 = document.querySelector(".k11");
+k12 = document.querySelector(".k12");
+k13 = document.querySelector(".k13");
+k14 = document.querySelector(".k14");
+k15 = document.querySelector(".k15");
+k16 = document.querySelector(".k16");
+k17 = document.querySelector(".k17");
+k18 = document.querySelector(".k18");
+k19 = document.querySelector(".k19");
+k20 = document.querySelector(".k20");
+k21 = document.querySelector(".k21");
+k22 = document.querySelector(".k22");
+k23 = document.querySelector(".k23");
+k24 = document.querySelector(".k24");
+k25 = document.querySelector(".k25");
+k26 = document.querySelector(".k26");
+k27 = document.querySelector(".k27");
+k28 = document.querySelector(".k28");
+k29 = document.querySelector(".k29");
+k30 = document.querySelector(".k30");
+k31 = document.querySelector(".k31");
+k32 = document.querySelector(".k32");
 
+
+//Die Kartensets
+
+let memoryL: HTMLElement[] = [k1, k2, k3, k4, k5, k6, k7, k8];
+
+let memoryM: HTMLElement[] = [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16];
+
+let memoryS: HTMLElement[] = [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k23, k24, k25, k26, k27, k28, k29, k30, k31, k32];
+
+//dazugehörige Fraben, Piktogramme und Sätze
+
+let farbeOderSoL: string[] = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis"];
+let farbeOderSoM: string[] = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis",
+"hellgrün", "hellgrün", "zebra", "zebra", "css_defi_Teil1", "css_defi_Teil2", "html_Teil1", "html_Teil2"];
 
 //Ende Definition
 
@@ -90,45 +149,47 @@ cBttn.addEventListener("click", function(): void {
 
 }); //Ende CBttn
 
+
+
 //jetzt sollen die Karten-Klassen verteilen werden; basierend auf Schwierigkeit
 
 function verarbeite(): void { //function, weil erst checken soll, wenn Wert definiert wird
 switch (cCheck) {
 
     case "l":
-        //console.log("leicht");
-        k2.classList.add("rot");
-        k1.classList.add("zebra");
+        //erstmal muss das Array der Karten zufällig verteilt werden
+        memoryL.sort((a, b) => 0.5 - Math.random());
+
+        //und jetzt werden sie verteilt
+        for (let i: number = 0; i <= memoryL.length; i++) {
+            memoryL[i].classList.add(farbeOderSoL[i]);
+        } 
         break;
     case "m":
-        //console.log("mittel");
+        //erstmal muss das Array der Karten zufällig verteilt werden
+        memoryM.sort((a, b) => 0.5 - Math.random());
+
+        //und jetzt werden sie verteilt
+        for (let i: number = 0; i <= memoryM.length; i++) {
+            memoryM[i].classList.add(farbeOderSoM[i]);
+        } 
         break;    
+    case "s":
+        //erstmal muss das Array der Karten zufällig verteilt werden
+        memoryS.sort((a, b) => 0.5 - Math.random());
+
+        //und jetzt werden sie verteilt
+        for (let i: number = 0; i <= memoryL.length; i++) {
+            memoryS[i].classList.add(farbeOderSoS[i]);
+        } 
+        break;
 }//Ende switch case
-}//Ende function verarbeite
-
-/*leicht
-if (cCheck == "l") {
-    console.log("Eins");
-} else {
-
-    //mittel
-    if (cCheck == "m") {
-        k1.classList.add("red");
-        k2.classList.add("zebra");
-        console.log("Hallo");
-    } else {
-
-        //schwierig
-        if (cCheck == "s") {
-            console.log("Drei");
-        }
-    }// Ende elseM
-}//Ende elseL
-*/
+}//Ende function verarbeiten
 
 //Test
 document.querySelector(".chatchat").addEventListener("click", function(): void {
 console.log(cCheck);
+console.log(memoryL);
 });
 
 
