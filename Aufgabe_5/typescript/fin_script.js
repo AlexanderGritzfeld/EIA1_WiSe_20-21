@@ -15,10 +15,6 @@ var fin;
     var is12;
     var is16;
     //Karten an sich
-    /*Interface
-    interface memoryL {
-        content: HTMLElement;
-    } */
     var k1;
     var k2;
     var k3;
@@ -27,7 +23,30 @@ var fin;
     var k6;
     var k7;
     var k8;
-    var memoryL = [k1, k2, k3, k4, k5, k6, k7, k8];
+    var k9;
+    var k10;
+    var k11;
+    var k12;
+    var k13;
+    var k14;
+    var k15;
+    var k16;
+    var k17;
+    var k18;
+    var k19;
+    var k20;
+    var k21;
+    var k22;
+    var k23;
+    var k24;
+    var k25;
+    var k26;
+    var k27;
+    var k28;
+    var k29;
+    var k30;
+    var k31;
+    var k32;
     challenge = document.querySelector(".challenge");
     cBttn = document.querySelector(".cBttn");
     leicht = document.getElementById("leicht");
@@ -38,6 +57,44 @@ var fin;
     is16 = document.querySelector(".is16");
     k1 = document.querySelector(".k1");
     k2 = document.querySelector(".k2");
+    k3 = document.querySelector(".k3");
+    k4 = document.querySelector(".k4");
+    k5 = document.querySelector(".k5");
+    k6 = document.querySelector(".k6");
+    k7 = document.querySelector(".k7");
+    k8 = document.querySelector(".k8");
+    k9 = document.querySelector(".k9");
+    k10 = document.querySelector(".k10");
+    k11 = document.querySelector(".k11");
+    k12 = document.querySelector(".k12");
+    k13 = document.querySelector(".k13");
+    k14 = document.querySelector(".k14");
+    k15 = document.querySelector(".k15");
+    k16 = document.querySelector(".k16");
+    k17 = document.querySelector(".k17");
+    k18 = document.querySelector(".k18");
+    k19 = document.querySelector(".k19");
+    k20 = document.querySelector(".k20");
+    k21 = document.querySelector(".k21");
+    k22 = document.querySelector(".k22");
+    k23 = document.querySelector(".k23");
+    k24 = document.querySelector(".k24");
+    k25 = document.querySelector(".k25");
+    k26 = document.querySelector(".k26");
+    k27 = document.querySelector(".k27");
+    k28 = document.querySelector(".k28");
+    k29 = document.querySelector(".k29");
+    k30 = document.querySelector(".k30");
+    k31 = document.querySelector(".k31");
+    k32 = document.querySelector(".k32");
+    //Die Kartensets
+    var memoryL = [k1, k2, k3, k4, k5, k6, k7, k8];
+    var memoryM = [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16];
+    var memoryS = [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k23, k24, k25, k26, k27, k28, k29, k30, k31, k32];
+    //dazugehörige Fraben, Piktogramme und Sätze
+    var farbeOderSoL = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis"];
+    var farbeOderSoM = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis",
+        "hellgrün", "hellgrün", "zebra", "zebra", "css_defi_Teil1", "css_defi_Teil2", "html_Teil1", "html_Teil2"];
     //Ende Definition
     //Bei Klick auf Mittel sollen nur noch 8 Kartenpaare da sein
     mittel.addEventListener("click", function () {
@@ -63,37 +120,35 @@ var fin;
     function verarbeite() {
         switch (cCheck) {
             case "l":
-                //console.log("leicht");
-                k2.classList.add("rot");
-                k1.classList.add("zebra");
+                //erstmal muss das Array der Karten zufällig verteilt werden
+                memoryL.sort(function (a, b) { return 0.5 - Math.random(); });
+                //und jetzt werden sie verteilt
+                for (var i = 0; i <= memoryL.length; i++) {
+                    memoryL[i].classList.add(farbeOderSoL[i]);
+                }
                 break;
             case "m":
-                //console.log("mittel");
+                //erstmal muss das Array der Karten zufällig verteilt werden
+                memoryM.sort(function (a, b) { return 0.5 - Math.random(); });
+                //und jetzt werden sie verteilt
+                for (var i = 0; i <= memoryM.length; i++) {
+                    memoryM[i].classList.add(farbeOderSoM[i]);
+                }
+                break;
+            case "s":
+                //erstmal muss das Array der Karten zufällig verteilt werden
+                memoryS.sort(function (a, b) { return 0.5 - Math.random(); });
+                //und jetzt werden sie verteilt
+                for (var i = 0; i <= memoryL.length; i++) {
+                    memoryS[i].classList.add(farbeOderSoS[i]);
+                }
                 break;
         } //Ende switch case
-    } //Ende function verarbeite
-    /*leicht
-    if (cCheck == "l") {
-        console.log("Eins");
-    } else {
-    
-        //mittel
-        if (cCheck == "m") {
-            k1.classList.add("red");
-            k2.classList.add("zebra");
-            console.log("Hallo");
-        } else {
-    
-            //schwierig
-            if (cCheck == "s") {
-                console.log("Drei");
-            }
-        }// Ende elseM
-    }//Ende elseL
-    */
+    } //Ende function verarbeiten
     //Test
     document.querySelector(".chatchat").addEventListener("click", function () {
         console.log(cCheck);
+        console.log(memoryL);
     });
 })(fin || (fin = {})); //Ende namespace
 //# sourceMappingURL=fin_script.js.map
