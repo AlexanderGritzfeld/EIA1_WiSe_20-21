@@ -108,7 +108,6 @@ h2 {
 }
 
 
-
 .challenge {
     position: absolute;
     left: 400px;
@@ -209,4 +208,19 @@ h2 {
 }
 .pfeil_unten {
     background-image: url(/Aufgabe_5/images/pfeil_unten.png);
+}
+
+
+.css_defi_Teil1 {
+    background-image: url(/Aufgabe_5/images/css_defi_Teil1.png);
+}
+.css_defi_Teil2 {
+    background-image: url(/Aufgabe_5/images/EIA_Css2.png);
+}
+
+.html_Teil1 {
+    background-image: url(/Aufgabe_5/images/html_Teil1.png);
+}
+.html_Teil2 {
+    background-image: url(/Aufgabe_5/images/html_Teil2.png);
 }
