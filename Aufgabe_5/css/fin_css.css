@@ -85,12 +85,12 @@ h2 {
 .karte {
     width: 100px;
     height: 100px;
-    background-image: url(/Aufgabe_5/images/Karte_bg.png);
     margin-top: 50px;
     margin-inline-start: 15px;
     display: inline-block;
     cursor: pointer;
     border-radius: 3px;
+    background-image: url(/Aufgabe_5/images/Karte_bg.png);
 }
 .karte:hover {
     transform: scale(1.05);
@@ -223,4 +223,33 @@ h2 {
 }
 .html_Teil2 {
     background-image: url(/Aufgabe_5/images/html_Teil2.png);
+}
+
+.js1_T1 {
+    background-image: url(/Aufgabe_5/images/js1_T1.jpg);
+}
+.js1_t2 {
+    background-image: url(/Aufgabe_5/images/js1_t2.png);
+}
+.js2_t1 {
+    background-image: url(/Aufgabe_5/images/js2_t1.png);
+}
+.js2_t2 {
+    background-image: url(/Aufgabe_5/images/js2_t2.png);
+}
+.js3_t1 {
+    background-image: url(/Aufgabe_5/images/js3_t1.png);
+}
+.js3_t2 {
+    background-image: url(/Aufgabe_5/images/js3_t2.png);
+}
+.js4_t1 {
+    background-image: url(/Aufgabe_5/images/js4_t1.png);
+}
+.js4_t2 {
+    background-image: url(/Aufgabe_5/images/js4_t2.png);
+}
+
+.blank {
+    background-image: url(/Aufgabe_5/images/Karte_bg.png) !important;
 }
