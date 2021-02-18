@@ -93,8 +93,8 @@ var fin;
     var memoryS = [k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k23, k24, k25, k26, k27, k28, k29, k30, k31, k32];
     //dazugehörige Fraben, Piktogramme und Sätze
     var farbeOderSoL = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis"];
-    var farbeOderSoM = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis",
-        "hellgrün", "hellgrün", "zebra", "zebra", "css_defi_Teil1", "css_defi_Teil2", "html_Teil1", "html_Teil2"];
+    var farbeOderSoM = ["rot", "rot", "lila", "lila", "pfeil_unten", "pfeil_unten", "kreis", "kreis", "hellgrün", "hellgrün", "zebra", "zebra", "css_defi_Teil1", "css_defi_Teil2", "html_Teil1", "html_Teil2"];
+    var farbeOderSoS = ["rot", "rot", "lila", "lila", "hellgrün", "hellgrün", "css_defi_Teil1", "css_defi_Teil2", "html_Teil1", "html_Teil2", "rosa", "rosa", "orange", "orange", "js1_T1", "js1_t2", "js2_t1", "js2_t2", "js3_t1", "js3_t2", "js4_t1", "js4_t2", "hellblau", "hellblau", "gelb", "gelb", "dunkelgrün", "dunkelgrün", "dunkelblau", "dunkelblau", "braun", "braun"];
     //Ende Definition
     //Bei Klick auf Mittel sollen nur noch 8 Kartenpaare da sein
     mittel.addEventListener("click", function () {
@@ -122,29 +122,51 @@ var fin;
             case "l":
                 //erstmal muss das Array der Karten zufällig verteilt werden
                 memoryL.sort(function (a, b) { return 0.5 - Math.random(); });
+                farbeOderSoL.sort(function (a, b) { return 0.5 - Math.random(); });
                 //und jetzt werden sie verteilt
-                for (var i = 0; i <= memoryL.length; i++) {
-                    memoryL[i].classList.add(farbeOderSoL[i]);
+                for (var a = 0; a < memoryL.length; a++) {
+                    memoryL[a].classList.add(farbeOderSoL[a]);
                 }
                 break;
             case "m":
                 //erstmal muss das Array der Karten zufällig verteilt werden
                 memoryM.sort(function (a, b) { return 0.5 - Math.random(); });
+                farbeOderSoM.sort(function (a, b) { return 0.5 - Math.random(); });
                 //und jetzt werden sie verteilt
-                for (var i = 0; i <= memoryM.length; i++) {
-                    memoryM[i].classList.add(farbeOderSoM[i]);
+                for (var b = 0; b < memoryM.length; b++) {
+                    memoryM[b].classList.add(farbeOderSoM[b]);
                 }
                 break;
             case "s":
                 //erstmal muss das Array der Karten zufällig verteilt werden
                 memoryS.sort(function (a, b) { return 0.5 - Math.random(); });
+                farbeOderSoS.sort(function (a, b) { return 0.5 - Math.random(); });
                 //und jetzt werden sie verteilt
-                for (var i = 0; i <= memoryL.length; i++) {
-                    memoryS[i].classList.add(farbeOderSoS[i]);
+                for (var c = 0; c < memoryS.length; c++) {
+                    memoryS[c].classList.add(farbeOderSoS[c]);
                 }
                 break;
         } //Ende switch case
     } //Ende function verarbeiten
+    //Wenn man eine Karte anklickt soll sie sich umdrehen
+    var alleKarten = document.querySelectorAll(".karte");
+    for (var z = 0; z < alleKarten.length; z++) {
+        alleKarten[z].addEventListener("click", function () {
+            console.log("Klick");
+            //soll nur machen, nachdem man eine Schwierigkeitsstufe ausgewählt hat
+            if (cCheck == "l" || cCheck == "m" || cCheck == "s") {
+                for (var chance = 0; chance < 2; chance++) { //man darf ja zwei mal umdrehen
+                    console.log(chance);
+                    console.log(this);
+                    this.classList.toggle("blank");
+                } //Ende for Schleife zwei mal umdrehen
+            }
+            else {
+                alert("Hey! Nicht schummeln!");
+            } // Ende if else
+        });
+    }
+    //document.querySelector(".k1" || ".k2" || ".k3" || ".k4" || ".k5" || ".k6" || ".k7" || ".k8" || ".k9" || ".k10" || ".k11" || ".k12" || ".k13" || ".k14" || ".k15" || ".k16" || ".k17" || ".k18" || ".k19" || ".k20" /* k21, k22, k23, k24, k25, k26, k27, k28, k29, k30, k31" || ".k32"*/).addEventListener("click", function(): void {
     //Test
     document.querySelector(".chatchat").addEventListener("click", function () {
         console.log(cCheck);
