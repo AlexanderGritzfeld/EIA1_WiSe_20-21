@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-    background: linear-gradient(135deg, rgba(255,255,255,1) 5%, rgba(192,202,214,1) 51%, rgba(157,154,169,1) 100%);
+    background-image: url(/Aufgabe_5/images/bg_tupf.png);
 
 }
 h1 {
@@ -14,7 +14,7 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.chat {
+.platz {
     position: relative;
     left: 20px;
     width: 300px;
@@ -24,25 +24,44 @@ h2 {
     border-radius: 3px;
     margin-left: 10px;
     font-size: 15px;
-
-
+    margin-top: 40px;
+    text-align: center;
 }
 
-.chatchat {
+.chartWrapper {
     position: relative;
-    width: 280px;
-    height: 40px;
-    left: 8px;
-    margin-top: 10px;
-    background-color: rgb(92, 92, 92);
-    border: 4px solid rgb(80, 80, 80);
-    z-index: 2;
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.chartWrapper .chartCOM {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(90, 4, 105);
+    transition: 1s;
 }
 
-.chatchat h2 {
-    position: relative;
-    left: 5px;
-    margin-top: 10px;
+.chartWrapper .chartSpieler {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(90, 4, 105);
+    transition: 1s;
+}
+footer {
+        text-align: center;
+        padding: 3px;
+        background-color: rgb(53, 55, 62);
+        color: white;
+        position: fixed;
+        width:300px;
+        height:100px;
+        bottom: 0;
+        right: 0;
 }
 
 .reihe {
@@ -52,6 +71,7 @@ h2 {
 .is4 {
     position: relative;
     left: 75px;
+    text-align: justify;
 }
 .is8 {
     position: relative;
@@ -114,9 +134,9 @@ h2 {
     top: 110px;
 }
 .bg_challenge {
-    position: absolute;
-    width: 300px;
-    height: 400px;
+    position: fixed;
+    width: 700px;
+    height: 200px;
     background-color: blue;
     border-radius: 5px;
     border: 3px solid black;
@@ -252,4 +272,33 @@ h2 {
 
 .blank {
     background-image: url(/Aufgabe_5/images/Karte_bg.png) !important;
+}
+
+.sieger {
+    left: 400px;
+    top: 110px;
+    position: fixed;
+    width: 700px;
+    height: 200px;
+    background-color: rgb(174, 0, 255);
+    border-radius: 5px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.sieger_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+#refresh_bttn {
+    width: 200px;
+    height: 50px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
 }
