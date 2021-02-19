@@ -3,90 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory</title>
-    <!--brauch ich das?-->
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"-->
-    <link rel="stylesheet" href="css/fin_css.css">
-    <script src="../Aufgabe_5/typescript/fin_script.js" defer></script>
+    <title>Memory Alexander Gritzfeld</title>
+    <link rel = "stylesheet" href = "css/fin_css.css">
+    <script src = "../Aufgabe_5/typescript/fin_script.js" defer></script>
     
 </head>
 
 <body>
-<!--Start Chat für Kurznachrichten und evt. Spielereien-->
-    <div class="chat">
-        <div class="chatchat">
-            <h2><u>Chat</u></h2>  
+
+    <div class = "platz">
+        <h2><u>Hier könnte Ihre Werbung stehen!</u></h2></div>
+<!--eig. Fortschrittbalken & Co>
+        <div class = "chartWrapper">
+
+            <div class = "chartCOM"></div>
+            <img id = "ruler" src = "/Aufgabe_5/images/skala.png">
+
+            <div class = "chartSpieler">
+                <img id = "ruler" src = "/Aufgabe_5/images/skala.png">
+            </div>
+
         </div>
-      
-    </div> <!--Ende Chat-->
+
+    </div> <--Ende platz-->
 
 <!--Start Karten; die eigentlichen Memory Karten-->
-    <div class="karten">
-        <div class="set1">
-            <div class="spalte is4">
-                <div class="karte k1 blank"></div>
-                <div class="karte k2 blank"></div>
-                <div class="karte k3 blank"></div>
-                <div class="karte k4 blank"></div>
+    <div class = "karten">
+        <div class = "set1">
+            <div class = "spalte is4">
+                <div class = "karte k1 blank"></div>
+                <div class = "karte k2 blank"></div>
+                <div class = "karte k3 blank"></div>
+                <div class = "karte k4 blank"></div>
             </div>
-            <div class="spalte is8">
-                <div class="karte k5 blank"></div>
-                <div class="karte k6 blank"></div>
-                <div class="karte k7 blank"></div>
-                <div class="karte k8 blank"></div>
+            <div class = "spalte is8">
+                <div class = "karte k5 blank"></div>
+                <div class = "karte k6 blank"></div>
+                <div class = "karte k7 blank"></div>
+                <div class = "karte k8 blank"></div>
             </div>
-            <div class="spalte is12">
-                <div class="karte k9 blank"></div>
-                <div class="karte k10 blank"></div>
-                <div class="karte k11 blank"></div>
-                <div class="karte k12 blank"></div>
+            <div class = "spalte is12">
+                <div class = "karte k9 blank"></div>
+                <div class = "karte k10 blank"></div>
+                <div class = "karte k11 blank"></div>
+                <div class = "karte k12 blank"></div>
             </div>
-            <div class="spalte is16">
-                <div class="karte k13 blank"></div>
-                <div class="karte k14 blank"></div>
-                <div class="karte k15 blank"></div>
-                <div class="karte k16 blank"></div>
+            <div class = "spalte is16">
+                <div class = "karte k13 blank"></div>
+                <div class = "karte k14 blank"></div>
+                <div class = "karte k15 blank"></div>
+                <div class = "karte k16 blank"></div>
             </div>
         </div> <!--Ende set1-->
         <!--verschiedene Sets, damit die auch auf eine Seite passen-->
-        <div class="set2">
-            <div class="spalte is20">
-                <div class="karte k17 blank"></div>
-                <div class="karte k18 blank"></div>
-                <div class="karte k19 blank"></div>
-                <div class="karte k20 blank"></div>
+        <div class = "set2">
+            <div class = "spalte is20">
+                <div class = "karte k17 blank"></div>
+                <div class = "karte k18 blank"></div>
+                <div class = "karte k19 blank"></div>
+                <div class = "karte k20 blank"></div>
             </div>
-            <div class="spalte is24">
-                <div class="karte k21 blank"></div>
-                <div class="karte k22 blank"></div>
-                <div class="karte k23 blank"></div>
-                <div class="karte k24 blank"></div>
+            <div class = "spalte is24">
+                <div class = "karte k21 blank"></div>
+                <div class = "karte k22 blank"></div>
+                <div class = "karte k23 blank"></div>
+                <div class = "karte k24 blank"></div>
             </div>
-            <div class="spalte is28">
-                <div class="karte k25 blank"></div>
-                <div class="karte k26 blank"></div>
-                <div class="karte k27 blank"></div>
-                <div class="karte k28 blank"></div>
+            <div class = "spalte is28">
+                <div class = "karte k25 blank"></div>
+                <div class = "karte k26 blank"></div>
+                <div class = "karte k27 blank"></div>
+                <div class = "karte k28 blank"></div>
             </div>
-            <div class="spalte is32">
-                <div class="karte k29 blank"></div>
-                <div class="karte k30 blank"></div>
-                <div class="karte k31 blank"></div>
-                <div class="karte k32 blank"></div>
+            <div class = "spalte is32">
+                <div class = "karte k29 blank"></div>
+                <div class = "karte k30 blank"></div>
+                <div class = "karte k31 blank"></div>
+                <div class = "karte k32 blank"></div>
             </div>
         </div> <!--Ende set2-->
     </div> <!--Ende karten-->
 <!--Anfang Pop-up, welches nach der Schwierigkeitsstufe fragt-->
-    <div class="challenge">
-        <div class="bg_challenge">
-            <div class="auswahl-intro"><u> Wählen Sie die Schwierigkeit aus</u></div>
-            <div class="cBttn">
-                <button id="leicht" title="4 Kartenpaare">Leicht </button>
-                <button id="mittel" title="8 Kartenpaare">Mittel</button>
-                <button id="schwierig" title="16 Kartenpaare">Schwierig</button>
+    <div class = "challenge">
+        <div class = "bg_challenge">
+            <div class = "auswahl-intro"><u> Wählen Sie die Schwierigkeit aus</u></div>
+            <div class = "cBttn">
+                <button id = "leicht" title = "4 Kartenpaare">Leicht </button>
+                <button id = "mittel" title = "8 Kartenpaare">Mittel </button>
+                <button id = "schwierig" title = "16 Kartenpaare">Schwierig </button>
             </div>
         </div>
     </div> <!--Ende challenge-->
+
+    <!--Pop-Up für Siegererklärung-->
+    <div class = "sieger is-hidden">
+
+        <div class = "sieger_text">Glückwunsch! </dr> Du hast gewonnen!</div>
+
+        <button id = "refresh_bttn" title = "Lädt die Seite neu">Nochmal von neu! </button>
+    </div>
+
+    <footer> <!--kleiner Bereich für Name, Matrikelnummer,...-->
+        <h2>Alexander Gritzfeld </dr> MKB1 | 266821</h2>
+    </footer>
 
 </body>
 
